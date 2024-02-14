@@ -1,21 +1,29 @@
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const navbarStyle = {
+    backgroundColor: "whitesmoke",
+    color: "black",
+    // padding: "10px",
+    display: "block",
+
+    // Agrega más propiedades de estilo según lo necesites
+  };
   return (
-    <div className="navbar">
-      <h1>
-        <a href="/">
+    <div className="navbar" style={navbarStyle}>
+      <nav>
+        <Link to="/">
           <img src="/logo.png" alt="logo" />
-        </a>
+        </Link>
         <ul>
-          <li>
-            <Link to="/login" />
+          <li style={{ display: "inline" }}>
+            <Link to="/Login">Login</Link>
           </li>
           <li>
-            <Link to="/home" />
+            <Link to="/Home">Home</Link>
           </li>
         </ul>
-      </h1>
+      </nav>
     </div>
   );
 }
