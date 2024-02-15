@@ -1,5 +1,13 @@
-export default class User {
-    readonly id: number;
+import { ModelCtor, Model } from "sequelize";
+
+export default class Users {
+    static hasMany(Comment: ModelCtor<Model<any, any>>) {
+      throw new Error('Method not implemented.');
+    }
+    static findByPk(userId: number) {
+        throw new Error("Method not implemented.");
+    }
+    readonly userId: number;
     birthdate: Date;
     createdAt: Date;
     email: string;
@@ -11,7 +19,7 @@ export default class User {
     address?: string;
 
     constructor(
-        id: number,
+        userId: number,
         birthdate: Date,
         createdAt: Date,
         email: string,
@@ -22,7 +30,7 @@ export default class User {
         updatedAt: Date,
         address?: string
     ) {
-        this.id = id;
+        this.userId = userId;
         this.birthdate = birthdate;
         this.createdAt = createdAt;
         this.email = email;
