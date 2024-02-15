@@ -16,9 +16,10 @@
 
 import { sequelize } from "./db";
 import server from "./server";
+import 'dotenv/config';
 //import io from "./socketServer/socketHandler";
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001; //uso del .env para el puerto
 
 
 sequelize
@@ -28,7 +29,7 @@ sequelize
       console.log(`Server listening on port ${PORT}`);
     });
   })
-  .catch((error: any) => {
+  .catch((error: Error) => {
     // Declara el tipo del parámetro 'error'
-    console.error(error);
+    console.error('Error al sincronizar la base de datos', error.message);
   });
