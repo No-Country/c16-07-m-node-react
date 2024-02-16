@@ -5,7 +5,7 @@ import fs from 'fs'
 import path from 'path'
 import Users from './types/Users';
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, DATABASE_URL } = process.env;
+const { DATABASE_URL } = process.env;
 
 
 let sequelize: Sequelize =  new Sequelize(DATABASE_URL!, {
