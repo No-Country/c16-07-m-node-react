@@ -42,12 +42,12 @@ entries.forEach(([modelName, model]) => {
 
 // ACA VAN LAS RELACIONES
 
-const { User, Comment, Activity } = sequelize.models
+const { User, Comment, Activity, Events } = sequelize.models
 
 
 
 Users.hasMany(Comment)
 Comment.belongsTo(User)
 
-export { Users, Comment, Activity }
+export { Users, Comment, Activity, Events }
 export { sequelize };
