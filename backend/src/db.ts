@@ -4,7 +4,7 @@ import 'dotenv/config';
 import fs from 'fs'
 import path from 'path'
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, DATABASE_URL } = process.env;
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
@@ -44,13 +44,11 @@ entries.forEach(([modelName, model]) => {
 
 // ACA VAN LAS RELACIONES
 
-const { User, Comment } = sequelize.models
+const { User, Comment, Activity, Events } = sequelize.models
 
 
 User.hasMany(Comment)
 Comment.belongsTo(User)
 
-
-
-export { User, Comment }
+export { Users, Comment }
 export { sequelize };
