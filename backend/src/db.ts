@@ -3,20 +3,24 @@ import 'dotenv/config';
 
 import fs from 'fs'
 import path from 'path'
-import Users from './types/Users';
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, DATABASE_URL } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
 
-
-let sequelize: Sequelize =  new Sequelize(DATABASE_URL!, {
-    logging: false,
-    native: false,
-    dialectOptions: {
+const sequelize = new Sequelize({
+  dialect: 'postgres',
+  username: DB_USER,
+  password: DB_PASSWORD,
+  host: DB_HOST,
+  port: Number(DB_PORT), 
+  database: DB_NAME,
+  logging: false,
+  native: false,
+  dialectOptions: {
       ssl: {
-        require: true,
-        rejectUnauthorized: false
+          require: true, // Requiere SSL
+          rejectUnauthorized: false // Permite conexiones sin certificados válidos (no recomendado en producción)
       }
-    }
+  }
 });
 
 const basename = path.basename(__filename)
@@ -38,16 +42,15 @@ entries.forEach(([modelName, model]) => {
     capitalizedModels[capitalizedModelName] = model as ModelCtor<any>;
 })
 
-
-
 // ACA VAN LAS RELACIONES
 
 const { User, Comment } = sequelize.models
 
 
-
-Users.hasMany(Comment)
+User.hasMany(Comment)
 Comment.belongsTo(User)
 
-export { Users, Comment }
+
+
+export { User, Comment }
 export { sequelize };
