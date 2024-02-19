@@ -50,5 +50,5 @@ const { User, Comment, Activity, Events } = sequelize.models
 User.hasMany(Comment)
 Comment.belongsTo(User)
 
-export { Users, Comment }
+export { User, Comment }
 export { sequelize };
