@@ -3,7 +3,8 @@ import Navbar from "./components/Navbar";
 // import Button from './components/ui/button'
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import Login from "../pages/Login";
+import Login from "../pages/login";
+
 
 function App() {
   return (
