@@ -2,6 +2,9 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import router from './routes/index';
+import { errorHandler, wrapError } from './middlewares/errorHandler';
+import passport from 'passport';
+import localStrategy from './libs/passport/localStrategy';
 
 const server = express();
 
@@ -15,6 +18,13 @@ server.use((req, res, next) => { //manejo de CORS al agregar las cabeceras neces
     next();
 });
 
+passport.use(localStrategy);
+server.use(passport.initialize());
 server.use(router);
+/*Importante: los siguientes dos middleware 
+(wrapError y errorHandler) siempre deben 
+ir luego de server.use(router)*/
+server.use(wrapError);
+server.use(errorHandler);
 
 export default server;
