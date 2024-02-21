@@ -1,29 +1,24 @@
-import { Request, Response } from "express";
-import { deleteEvent } from "@/controllers/Eventos/deleteEvent";
+import { deleteEvent } from "@/controllers/eventos/deleteEvent";
+import type { NextFunction, Request, Response } from "express";
 
-
-export async function deleteEventHandler(req: Request, res: Response){
+export async function deleteEventHandler(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
   try {
+    const id: number = parseInt(req.params.id, 10);
 
-    const eventID: number = parseInt(req.params.id, 10);
-
-
-    if (isNaN(eventID)) {
+    if (isNaN(id)) {
       res.status(400).json({ message: "ID de evento no válido" });
       return;
     }
 
+    await deleteEvent(id);
 
-    const success = await deleteEvent(eventID);
-
-    if (success) {
-      res.status(200).json({ message: "Evento eliminado correctamente" });
-    } else {
-      res.status(404).json({ message: "Evento no encontrado" });
-    }
+    return res.status(200).json({ message: "Evento eliminado correctamente" });
   } catch (error: any) {
-
-    console.error("Error al eliminar el evento:", error.message);
-    res.status(500).json({ message: "Error al eliminar el evento" });
+    console.error("Error al intentar eliminar el evento");
+    next(error);
   }
 }

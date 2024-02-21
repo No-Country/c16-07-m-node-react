@@ -1,17 +1,16 @@
-import { createEventHandler } from "@/handlers/Eventos/createEventsHandler";
-import { deleteEventHandler } from "@/handlers/Eventos/deleteEventHandler";
-import { getAllEventsHandler } from "@/handlers/Eventos/getAllEventsHandler";
-import { getEventHandler } from "@/handlers/Eventos/getEventsHandler";
-import { updateEventHandler } from "@/handlers/Eventos/updateEventsHandler";
 import express from "express";
+import { createEventHandler } from "@/handlers/eventos/createEventHandler";
+import { deleteEventHandler } from "@/handlers/eventos/deleteEventHandler";
+import { getAllEventsHandler } from "@/handlers/eventos/getAllEventsHandler";
+import { getEventByIdHandler } from "@/handlers/eventos/getEventByIdHandler";
+import { updateEventHandler } from "@/handlers/eventos/updateEventHandler";
 
 const eventsRouter = express.Router();
 
-eventsRouter.get('/getEvent/:id', getEventHandler);
-eventsRouter.post('/create', createEventHandler);
-eventsRouter.put('/update/:id', updateEventHandler);
-eventsRouter.delete('/delete/:id', deleteEventHandler);
-eventsRouter.get('/getAllEvents', getAllEventsHandler);
-
+eventsRouter.get("/:id", getEventByIdHandler);
+eventsRouter.get("/", getAllEventsHandler);
+eventsRouter.post("/", createEventHandler);
+eventsRouter.put("/:id", updateEventHandler);
+eventsRouter.delete("/:id", deleteEventHandler);
 
 export default eventsRouter;

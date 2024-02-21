@@ -1,12 +1,6 @@
-import { Events } from "../../db";
+import { Event } from "@/db";
+import type { TEvent } from "@/types/TEvent";
 
-
-export async function createEvent(newEventData: any){
-  try {
-    await Events.create(newEventData);
-    return true;
-  } catch (error: any) {
-    console.error("Error al agregar el evento:", error.message);
-    return false;
-  }
+export async function createEvent(newEventData: TEvent) {
+  return await Event.create(newEventData);
 }

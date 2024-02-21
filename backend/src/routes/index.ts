@@ -1,16 +1,12 @@
 import { Router } from 'express';
 import userRouter from './Users';
-import commentRouter from './Comments';
 import eventsRouter from './Events';
-
+import activitiesRouter from './Activities';
 
 const router = Router();
 
-
 router.use("/user",userRouter)
-
-router.use("/comment", commentRouter)
-
+router.use("/activities", activitiesRouter)
 router.use("/events", eventsRouter)
 
 

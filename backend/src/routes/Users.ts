@@ -1,30 +1,21 @@
 import { Router } from "express";
-import { passportMiddleware } from "../middlewares/passport";
-//
-import { deleteUserByIdHandler } from "../handlers/users/DeleteUsersById";
-import { getUserByIdHandler } from "../handlers/users/GetUsersById";
-import { getUsersByEmailHandler } from "../handlers/users/GetUsersByEmail";
-import { postUsersHandler } from "../handlers/users/PostUsers";
-import { updateUserByIdHandler } from "../handlers/users/UpdateUsersById";
-import { getAllUsersHandler } from "../handlers/users/GetAllUsers";
 import passport from "passport";
+import { deleteUserByIdHandler } from "../handlers/users/deleteUsersByIdHandler";
+import { getUserByIdHandler } from "../handlers/users/getUserByIdHandler";
+import { getUserByEmailHandler } from "../handlers/users/getUserByEmailHandler";
+import { createUserHandler } from "../handlers/users/createUserHandler";
+import { updateUserHandler } from "../handlers/users/UpdateUserHandler";
+import { getAllUsersHandler } from "../handlers/users/getAllUsersHandler";
+import { logUserInHandler } from "@/handlers/users/logUserInHandler";
 
 const userRouter = Router();
 
-userRouter.post("/login", passport.authenticate('local', { session: false }), (req, res) => {
-    res.json({ message: 'Login correcto', user: req.user });
-  });
-
-userRouter.get("/protected", passportMiddleware, (req, res) => {
-    res.send('Ruta protegida');
-})
-
-userRouter.get("/mail",getUsersByEmailHandler);
+userRouter.post("/login", passport.authenticate('local', { session: false }), logUserInHandler);
+userRouter.get("/mail", getUserByEmailHandler);
 userRouter.get("/:id",getUserByIdHandler);
 userRouter.get("/",getAllUsersHandler);
-userRouter.post("/",postUsersHandler);
+userRouter.post("/", createUserHandler);
+userRouter.put("/:id",updateUserHandler);
 userRouter.delete("/:id",deleteUserByIdHandler);
-userRouter.put("/:id",updateUserByIdHandler);
-
 
 export default userRouter;

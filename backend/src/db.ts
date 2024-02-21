@@ -23,32 +23,35 @@ const sequelize = new Sequelize({
   }
 });
 
-const basename = path.basename(__filename)
-
-const modelDefiners: ((sequelize: Sequelize) => void)[] = [];;
-
-fs.readdirSync(path.join(__dirname, '/models'))
-    .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
-    .forEach((file) => {
-        modelDefiners.push(require(path.join(__dirname, '/models', file)));
-});
-
-modelDefiners.forEach((model: any) => model.default(sequelize))
-let entries = Object.entries(sequelize.models)
-
-const capitalizedModels: { [key: string]: ModelCtor<any>} = {}
-entries.forEach(([modelName, model]) => {
-    const capitalizedModelName = modelName.charAt(0).toUpperCase() + modelName.slice(1)
-    capitalizedModels[capitalizedModelName] = model as ModelCtor<any>;
-})
+getAndCapitalizeModels();
 
 // ACA VAN LAS RELACIONES
-
-const { User, Comment, Activity, Events } = sequelize.models
-
+const { User, Comment, Activity, Event } = sequelize.models
 
 User.hasMany(Comment)
 Comment.belongsTo(User)
 
-export { Users, Comment, Activity, Events }
+export { User, Activity, Event }
 export { sequelize };
+
+function getAndCapitalizeModels()
+{
+    const basename = path.basename(__filename)
+
+    const modelDefiners: ((sequelize: Sequelize) => void)[] = [];;
+
+    fs.readdirSync(path.join(__dirname, '/models'))
+        .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
+        .forEach((file) => {
+            modelDefiners.push(require(path.join(__dirname, '/models', file)));
+    });
+
+    modelDefiners.forEach((model: any) => model.default(sequelize))
+    let entries = Object.entries(sequelize.models)
+
+    const capitalizedModels: { [key: string]: ModelCtor<any>} = {}
+    entries.forEach(([modelName, model]) => {
+        const capitalizedModelName = modelName.charAt(0).toUpperCase() + modelName.slice(1)
+        capitalizedModels[capitalizedModelName] = model as ModelCtor<any>;
+    })
+}
