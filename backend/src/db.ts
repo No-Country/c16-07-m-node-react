@@ -31,9 +31,6 @@ const { User, Comment, Activity, Event } = sequelize.models
 User.hasMany(Comment)
 Comment.belongsTo(User)
 
-export { User, Activity, Event }
-export { sequelize };
-
 function getAndCapitalizeModels()
 {
     const basename = path.basename(__filename)
@@ -55,3 +52,6 @@ function getAndCapitalizeModels()
         capitalizedModels[capitalizedModelName] = model as ModelCtor<any>;
     })
 }
+
+export { User, Activity, Event }
+export { sequelize };
