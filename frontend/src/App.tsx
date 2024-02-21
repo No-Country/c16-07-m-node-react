@@ -2,8 +2,6 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 // import Button from './components/ui/button'
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Login from "../pages/login";
 import rutas from "./route.config";
 //import IndividualOldMan from "./oldMen/IndividualOldMan";
 
