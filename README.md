@@ -128,6 +128,5 @@ Si tienes alguna pregunta o sugerencia sobre este proyecto, no dudes en ponerte 
 
 ---
 
-Recuerda reemplazar `insertar-ruta-del-logo`, `insertar-linkedin`, `insertar-link-del-prototipo` y `insertar-correo` con la información real de tu proyecto.
 
 
