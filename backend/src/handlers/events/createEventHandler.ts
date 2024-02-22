@@ -1,8 +1,8 @@
-import { createEvent } from "@/controllers/eventos/createEvent";
+import createEvent from "../../controllers/events/createEvent";
 import type { NextFunction, Request, Response } from "express";
-import type { TEvent } from "@/types/TEvent";
+import type { TEvent } from "../../types/TEvent";
 
-export async function createEventHandler(
+export default async function createEventHandler(
   req: Request,
   res: Response,
   next: NextFunction

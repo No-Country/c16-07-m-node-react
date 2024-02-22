@@ -1,7 +1,7 @@
-import { getActivityById } from "../../controllers/activities/getActivityById";
+import getActivityById from "../../controllers/activities/getActivityById";
 import type { NextFunction, Request, Response } from "express";
 
-export async function getActivityByIdHandler(
+export default async function getActivityByIdHandler(
   req: Request,
   res: Response,
   next: NextFunction

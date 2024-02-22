@@ -1,6 +1,5 @@
 import express from 'express';
 import morgan from 'morgan';
-import cors from 'cors';
 import router from './routes/index';
 import { errorHandler, wrapError } from './middlewares/errorHandler';
 import passport from 'passport';

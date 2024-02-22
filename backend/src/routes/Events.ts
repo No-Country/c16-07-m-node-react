@@ -1,9 +1,9 @@
 import express from "express";
-import { createEventHandler } from "@/handlers/eventos/createEventHandler";
-import { deleteEventHandler } from "@/handlers/eventos/deleteEventHandler";
-import { getAllEventsHandler } from "@/handlers/eventos/getAllEventsHandler";
-import { getEventByIdHandler } from "@/handlers/eventos/getEventByIdHandler";
-import { updateEventHandler } from "@/handlers/eventos/updateEventHandler";
+import createEventHandler  from "../handlers/events/createEventHandler";
+import deleteEventHandler  from "../handlers/events/deleteEventHandler";
+import getAllEventsHandler  from "../handlers/events/getAllEventsHandler";
+import getEventByIdHandler  from "../handlers/events/getEventByIdHandler";
+import updateEventHandler  from "../handlers/events/updateEventHandler";
 
 const eventsRouter = express.Router();
 

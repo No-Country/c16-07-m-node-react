@@ -1,7 +1,7 @@
-import { getUserById } from "@/controllers/users/getUserById";
+import getUserById from "../../controllers/users/getUserById"
 import type { Request, Response, NextFunction } from "express";
 
-export async function getUserByIdHandler(
+export default async function getUserByIdHandler(
   req: Request,
   res: Response,
   next: NextFunction

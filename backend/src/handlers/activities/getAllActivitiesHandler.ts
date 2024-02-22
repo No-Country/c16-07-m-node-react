@@ -1,7 +1,7 @@
-import { getAllActivities } from "../../controllers/activities/getAllActivities";
+import getAllActivities from "../../controllers/activities/getAllActivities";
 import type { NextFunction, Request, Response } from "express";
 
-export async function getAllActivitiesHandler(
+export default async function getAllActivitiesHandler(
   req: Request,
   res: Response,
   next: NextFunction

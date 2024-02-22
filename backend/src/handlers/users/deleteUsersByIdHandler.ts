@@ -1,7 +1,7 @@
-import { deleteUser } from "@/controllers/users/deleteUser";
+import deleteUser from "../../controllers/users/deleteUser";
 import type { Request, Response, NextFunction } from "express";
 
-export async function deleteUserByIdHandler(
+export default async function deleteUserByIdHandler(
   req: Request,
   res: Response,
   next: NextFunction

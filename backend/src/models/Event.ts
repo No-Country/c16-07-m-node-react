@@ -1,8 +1,8 @@
-import { DataTypes } from "sequelize";
-import { Sequelize } from "sequelize-typescript";
+import { DataTypes, Sequelize } from "sequelize";
 
-export default function initializeCommentModel(sequelize: Sequelize): void {
-  sequelize.define('Events',
+export default function initializeEventModel(sequelize: Sequelize) {
+  return sequelize.define(
+    "Events",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -15,11 +15,11 @@ export default function initializeCommentModel(sequelize: Sequelize): void {
       category: {
         type: DataTypes.INTEGER,
       },
-      name:{
-        type: DataTypes.STRING
+      name: {
+        type: DataTypes.STRING,
       },
-      description:{
-       type:  DataTypes.STRING
+      description: {
+        type: DataTypes.STRING,
       },
     },
     {

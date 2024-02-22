@@ -1,7 +1,7 @@
 import boom from "@hapi/boom";
-import { User } from "@/db";
+import { User } from "../../db";
 
-export async function getUserByEmail(email: string) {
+export default async function getUserByEmail(email: string) {
   const user = await User.findOne({ where: { email } });
 
   if (!user)

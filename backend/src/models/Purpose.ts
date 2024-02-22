@@ -1,20 +1,21 @@
-import { DataTypes } from "sequelize";
-import type { Sequelize } from "sequelize-typescript";
+import { DataTypes, Sequelize } from "sequelize";
 
-export default function initializeActivityModel(sequalize: Sequelize) {
-    sequalize.define("Purposes", {
-        idPurposes: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    }, 
+export default function initializePuroseModel(sequelize: Sequelize) {
+  return sequelize.define(
+    "Purposes",
     {
-        timestamps: false
+      idPurposes: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    },
+    {
+      timestamps: false,
     }
-    )
+  );
 }

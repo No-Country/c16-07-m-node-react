@@ -1,5 +1,5 @@
-import { Activity } from "@/db";
+import { Activity } from "../../db";
 
-export async function getAllActivities() {
+export default async function getAllActivities() {
   return await Activity.findAll();
 }

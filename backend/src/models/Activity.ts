@@ -1,24 +1,25 @@
-import { DataTypes } from "sequelize";
-import type { Sequelize } from "sequelize-typescript";
+import { DataTypes, Sequelize } from "sequelize";
 
-export default function initializeActivityModel(sequalize: Sequelize) {
-    sequalize.define("Activity", {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        description: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    }, 
+export default function initializeAcitivyModel(sequelize: Sequelize) {
+  return sequelize.define(
+    "Activity",
     {
-        timestamps: false
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      description: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    },
+    {
+      timestamps: false,
     }
-    )
+  );
 }
