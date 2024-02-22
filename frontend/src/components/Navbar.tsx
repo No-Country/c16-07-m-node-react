@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"
+//import logo from "../assets/logo.png"
 
 export default function Navbar() {
   
@@ -10,7 +10,7 @@ export default function Navbar() {
           <ul className="space-x-4 hidden md:flex">  
             <li>
               <Link to="/" className="text-green-700 hover:text-green-950 text-2xl">
-                <img src={logo} alt="logo" className="w-9 inline p-auto" />            
+                {/* <img src={logo} alt="logo" className="w-9 inline p-auto" />             */}
               </Link>         
             </li>
             <li>
