@@ -26,10 +26,7 @@ const sequelize = new Sequelize({
 getAndCapitalizeModels();
 
 // ACA VAN LAS RELACIONES
-const { User, Comment, Activity, Event } = sequelize.models
-
-User.hasMany(Comment)
-Comment.belongsTo(User)
+const { User, Activity, Event } = sequelize.models
 
 function getAndCapitalizeModels()
 {
