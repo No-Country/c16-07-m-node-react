@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { LoginUser } from "../src/components/LoginUser";
-import { CreateAccount } from "../src/components/CreateAccount";
+import { LoginUser } from "../components/LoginUser";
+import { CreateAccount } from "../components/CreateAccount";
 
 
 export default function Login() {
