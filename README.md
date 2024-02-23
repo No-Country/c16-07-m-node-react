@@ -39,7 +39,7 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 ## Planteo de los POV
 
 **POV1:**
-Carlos es un adulto mayor al que le gusta mucho compartir tiempo con otras personas. Su familia vive lejos, por lo que a menudo se encuentra un poco solo. El necesita encontrar personas con quienes pasar tiempo porque extraña socializar y le encanta conocer gente nueva.
+Inés es una adulta mayor a la que le gusta mucho compartir tiempo con otras personas. Su familia vive lejos, por lo que a menudo se encuentra un poco sola. Ella necesita encontrar personas con quienes pasar tiempo porque extraña socializar y le encanta conocer gente nueva
 
 **POV2:**
 Andrés es un joven inquieto que siempre busca la manera de estar vinculado con su comunidad. Nota que gran parte de la población es de adultos mayores, pero no sabe bien cómo integrarse a ellos. Necesita saber más sobre esta población porque de esta manera podrá integrarlos en la comunidad y pasar tiempo con ellos.
