@@ -4,7 +4,7 @@ export default function initializeInterestModel(sequelize: Sequelize) {
   return sequelize.define(
     "Interests",
     {
-      idInterests: {
+      id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
