@@ -27,7 +27,7 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 
 ## Tecnologías Utilizadas
 
-- ![Vite.js Logo]([insertar-ruta-del-logo]) **Vite.js**: Un entorno de desarrollo rápido para aplicaciones web modernas.
+- ![Vite.js Logo](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) **Vite.js**: Un entorno de desarrollo rápido para aplicaciones web modernas.
 - ![Tailwind CSS Logo](insertar-ruta-del-logo) **Tailwind CSS**: Un framework de CSS utilitario para diseñar rápidamente interfaces de usuario.
 - ![Next.js UI Logo](insertar-ruta-del-logo) **Next.js UI**: Una biblioteca de componentes de interfaz de usuario para React y Next.js.
 - ![Daysi CSS Logo](insertar-ruta-del-logo) **Daysi CSS**: Una biblioteca de estilos CSS personalizados para mejorar la apariencia de la aplicación.
