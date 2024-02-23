@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 export default function Navbar() {
   return (
     <div className="bg-white py-4 px-4 absolute left-1/2 transform -translate-x-1/2 bottom-20 h-fit w-fit rounded-full 
