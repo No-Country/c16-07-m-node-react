@@ -2,24 +2,27 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="bg-secondary-content bottom-20 min-h-screen w-full text-primary-content" >
+    <>
+    
+  
+    <main className="bg-white min-h-screen w-full text-black">
 
       <section className="flex justify-center flex-col w-full h-fit" style={{ backgroundImage: 'url("../public/assets/image/banner.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className="bg-neutral-content">
+        <div className="bg-white">
           <img src="../public/assets/image/logo_app_acompanar.png" className="m-auto" />
         </div>
-        <div className="card bg-accent shadow-xl max-h-64 mx-auto my-40">        
+        <div className="card bg-white shadow-xl max-h-64 mx-auto my-40">        
           <div className="card-body items-center text-center">
             <h2 className="card-title text-2xl">Conectando Generaciones</h2>
             <p>Un puente social para adultos mayores</p>
-            <div className="card-actions">
-              <button className="btn btn-info">Únete ahora</button>
+            <div className="card-action">
+              <button className="btn bg-blue-500 text-white">Únete ahora</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-wrap justify-evenly text-primary my-10">
+      <section className="flex flex-wrap justify-evenly text-black my-10 bg-white">
         <div className="my-auto text-center">
           <h2 className="text-2xl font-semibold m-4">Eventos</h2>          
           <p className="text-xl p2 mb-4">Aqui encontrarás todos los eventos de la comunidad</p>
@@ -78,7 +81,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center ">
           <article className="w-72 bg-neutral rounded-xl shadow-xl m-2">
             <div className="h-32 grid place-items-center">
-              <div className="border-2 border-stone-800 p-1.5 rounded-full">
+              <div className="border-2 p-1.5 rounded-full">
                 <div className="relative h-20 w-20 rounded-full overflow-hidden">
                   <img
                     className="absolute w-full h-full top-0 left-0 object-cover"
@@ -137,6 +140,7 @@ export default function Home() {
       </section>            
       
     </main>
+    </>
   )
   ;
 }
