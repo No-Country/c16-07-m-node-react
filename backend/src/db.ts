@@ -1,8 +1,14 @@
-import { Sequelize, ModelCtor } from 'sequelize-typescript';
 import 'dotenv/config';
-
-import fs from 'fs'
+import { Sequelize } from 'sequelize';
+import { ModelCtor } from 'sequelize-typescript';
+import * as fs from 'fs'
 import path from 'path'
+import initializeAcitivyModel from './models/Activity';
+import initializeEventModel from "./models/Event";
+import initializeInterestModel from './models/Interest';
+import initializePurposeModel from './models/Purpose';
+import initializeUserModel from './models/User';
+
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
 
@@ -15,21 +21,30 @@ const sequelize = new Sequelize({
   database: DB_NAME,
   logging: false,
   native: false,
-  dialectOptions: {
-      ssl: {
-          require: true, // Requiere SSL
-          rejectUnauthorized: false // Permite conexiones sin certificados válidos (no recomendado en producción)
-      }
-  }
+  dialectOptions: {}
 });
 
-getAndCapitalizeModels();
+// getAndCapitalizeModels();
+
+export const Activity = initializeAcitivyModel(sequelize);
+export const Event = initializeEventModel(sequelize);
+export const Interest = initializeInterestModel(sequelize);
+export const Purpose = initializePurposeModel(sequelize);
+export const User = initializeUserModel(sequelize);
 
 // ACA VAN LAS RELACIONES
-const { User, Comment, Activity, Event } = sequelize.models
+User.belongsTo(Purpose, {
+    foreignKey: {
+        "name": "purposeId"
+    }
+});
+Purpose.hasMany(User);
 
-User.hasMany(Comment)
-Comment.belongsTo(User)
+User.belongsToMany(Interest, {through: "UsersInterests"});
+Interest.belongsToMany(User, {through: "UsersInterests"});
+
+Interest.belongsToMany(Event, {through: "InterestsEvents"});
+Event.belongsToMany(Interest, {through: "InterestsEvents"});
 
 function getAndCapitalizeModels()
 {
@@ -53,5 +68,4 @@ function getAndCapitalizeModels()
     })
 }
 
-export { User, Activity, Event }
-export { sequelize };
+export default sequelize;

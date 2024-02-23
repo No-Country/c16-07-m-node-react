@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken";
-import { TUser } from "@/types/TUser";
+import { TUser } from "../../types/TUser";
 import { Request, Response } from "express";
 
-export async function logUserInHandler(req: Request, res: Response) {
+export default async function logUserInHandler(req: Request, res: Response) {
   const user = req.user as TUser; //req.user fue establecido por passport en ese punto
 
     const {JWT_KEY} = process.env;

@@ -1,8 +1,7 @@
-import { getAllEvents } from "@/controllers/eventos/getAllEvents";
+import getAllEvents from "../../controllers/events/getAllEvents";
 import type { NextFunction, Request, Response } from "express";
 
-// Manejador para obtener todos los eventos
-export async function getAllEventsHandler(
+export default async function getAllEventsHandler(
   req: Request,
   res: Response,
   next: NextFunction

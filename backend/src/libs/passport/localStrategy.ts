@@ -1,7 +1,7 @@
 import { Strategy as LocalStrategy } from "passport-local";
 import bcrypt from "bcrypt";
 import boom from "@hapi/boom";
-import { User } from "@/db";
+import { User } from "../../db";
 
 export default new LocalStrategy({
 	usernameField: 'email', //usamos el campo de email como nombre de usuario

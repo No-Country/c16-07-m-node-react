@@ -1,7 +1,7 @@
-import { getAllUsers } from "@/controllers/users/getAllUsers";
+import getAllUsers from "../../controllers/users/getAllUsers"
 import type { NextFunction, Request, Response } from "express";
 
-export async function getAllUsersHandler(
+export default async function getAllUsersHandler(
   req: Request,
   res: Response,
   next: NextFunction

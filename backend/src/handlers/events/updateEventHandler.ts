@@ -1,8 +1,8 @@
-import { updateEvent } from "@/controllers/eventos/updateEvent";
+import updateEvent from "../../controllers/events/updateEvent";
 import type { NextFunction, Request, Response } from "express";
-import type { TEvent } from "@/types/TEvent";
+import type { TEvent } from "../../types/TEvent";
 
-export async function updateEventHandler(
+export default async function updateEventHandler(
   req: Request,
   res: Response,
   next: NextFunction

@@ -1,7 +1,7 @@
+import getEventById from "../../controllers/events/getEventById";
 import { NextFunction, Request, Response } from "express";
-import { getEventById } from "../../controllers/eventos/getEventById";
 
-export async function getEventByIdHandler(
+export default async function getEventByIdHandler(
   req: Request,
   res: Response,
   next: NextFunction

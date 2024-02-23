@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response } from "express";
-import { getUserByEmail } from "@/controllers/users/getUserByEmail";
+import getUserByEmail from "../../controllers/users/getUserByEmail"
+import type { NextFunction, Request, Response } from "express";
 
-export async function getUserByEmailHandler(
+export default async function getUserByEmailHandler(
   req: Request,
   res: Response,
   next: NextFunction

@@ -1,17 +1,13 @@
 import { DataTypes, Sequelize } from "sequelize";
 
-export default function initializeAcitivyModel(sequelize: Sequelize) {
+export default function initializeInterestModel(sequelize: Sequelize) {
   return sequelize.define(
-    "Activity",
+    "Interests",
     {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-      },
-      description: {
-        type: DataTypes.STRING,
-        allowNull: false,
       },
       name: {
         type: DataTypes.STRING,

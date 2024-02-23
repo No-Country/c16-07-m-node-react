@@ -1,8 +1,8 @@
-import { createUser } from "@/controllers/users/createUser";
+import createUser from "../../controllers/users/createUser";
 import type { Request, Response, NextFunction } from "express";
-import type { TUser } from "@/types/TUser";
+import type { TUser } from "../../types/TUser";
 
-export async function createUserHandler(
+export default async function createUserHandler(
   req: Request,
   res: Response,
   next: NextFunction
@@ -10,22 +10,28 @@ export async function createUserHandler(
   try {
     const {
       address,
+      aboutMe,
       birthdate,
+      country,
+      email,
       firstName,
       lastName,
-      email,
       observations,
       password,
+      postalCode,
     } = req.body;
-    
+
     const userData = {
       address,
+      aboutMe,
       birthdate,
+      country,
+      email,
       firstName,
       lastName,
-      email,
       observations,
       password,
+      postalCode,
     } as TUser;
 
     const user = await createUser(userData);

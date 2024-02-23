@@ -1,7 +1,7 @@
-import { deleteEvent } from "@/controllers/eventos/deleteEvent";
+import deleteEvent from "../../controllers/events/deleteEvent";
 import type { NextFunction, Request, Response } from "express";
 
-export async function deleteEventHandler(
+export default async function deleteEventHandler(
   req: Request,
   res: Response,
   next: NextFunction

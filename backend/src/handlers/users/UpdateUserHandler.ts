@@ -1,8 +1,8 @@
-import { updateUser } from "@/controllers/users/updateUser";
+import updateUser from "../../controllers/users/updateUser"
 import type { NextFunction, Request, Response } from "express";
-import type { TUser } from "@/types/TUser";
+import type { TUser } from "../../types/TUser";
 
-export async function updateUserHandler(
+export default async function updateUserHandler(
   req: Request,
   res: Response,
   next: NextFunction
