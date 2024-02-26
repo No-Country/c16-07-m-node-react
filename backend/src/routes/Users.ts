@@ -1,11 +1,11 @@
 import { Router } from "express";
 import passport from "passport";
 import  deleteUserByIdHandler from "../handlers/users/deleteUsersByIdHandler";
+import getAllUsersHandler from "../handlers/users/getAllUsersHandler";
 import  getUserByIdHandler from "../handlers/users/getUserByIdHandler";
 import  getUserByEmailHandler from "../handlers/users/getUserByEmailHandler";
 import  createUserHandler from "../handlers/users/createUserHandler";
 import  updateUserHandler from "../handlers/users/UpdateUserHandler";
-import  getAllUsersHandler from "../handlers/users/getAllUsersHandler";
 import  logUserInHandler from "../handlers/users/logUserInHandler";
 
 const userRouter = Router();
