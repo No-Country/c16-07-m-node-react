@@ -1,5 +1,5 @@
 import express from 'express';
-import morgan from 'morgan';
+// import morgan from 'morgan';
 import router from './routes/index';
 import { errorHandler, wrapError } from './middlewares/errorHandler';
 import passport from 'passport';
@@ -7,7 +7,7 @@ import localStrategy from './libs/passport/localStrategy';
 
 const server = express();
 
-server.use(morgan('dev'));
+// server.use(morgan('dev'));
 server.use(express.json());
 server.use((req, res, next) => { //manejo de CORS al agregar las cabeceras necesarias a la respuesta, esto permite al servidor aceptar peticiones de un origen diferente
     res.header('Access-Control-Allow-Origin', '*');
