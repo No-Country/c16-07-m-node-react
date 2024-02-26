@@ -18,6 +18,8 @@ export default async function updateUserHandler(
       email,
       observations,
       password,
+      purposes,//agrega la recepción de propósitos desde el body
+      interests,//Agrega la recepción de intereses desde el body
     } = req.body;
     
     const userData = {
@@ -29,9 +31,15 @@ export default async function updateUserHandler(
       observations,
       password,
     } as TUser;
-    
-    const user = await updateUser(userId, userData);
+
+    // Llama a la función updateUser pasando los IDs de purposes e interests
+    const user = await updateUser(userId, userData, purposes, interests);
     return res.status(200).json(user);
+
+    
+    
+    //const user = await updateUser(userId, userData);
+    //return res.status(200).json(user);
   } catch (error) {
     console.error("Error al intentar actualizar el usuario");
     next(error);
