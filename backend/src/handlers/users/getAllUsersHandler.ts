@@ -1,4 +1,4 @@
-import getAllUsers from "../../controllers/users/getAllUsers";
+import getAllUsers from "src/controllers/users/getAllUsers";
 import type { NextFunction, Request, Response } from "express";
 
 export default async function getAllUsersHandler(
