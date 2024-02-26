@@ -1,13 +1,35 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../public/assets/image/logo_app_acompanar.png";
+import logoMini from "../../public/assets/image/logo_app_acompanar_mini.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faCalendarAlt, faPuzzlePiece, faPeopleGroup, faCircleUser, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faPuzzlePiece, faPeopleGroup, faCircleUser, faQuestionCircle, faCalendar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar() {  
-    return (
-      <div className="py-4 px-4 fixed left-1/2 transform -translate-x-1/2 bottom-8 h-fit z-10
-                      md:static md:h-fit md:left-0 md:w-full md:transform-none md:rounded-none md:bg-gray-100">
-        <nav className="container mx-auto flex flex-wrap items-center justify-around font-bold text-sm">
+export default function Navbar() {
+  const location = useLocation();
+
+  return (      
+    <>
+      <nav className="flex justify-between bg-white font-semibold border-b-4 border-sky-500 text-lg sticky top-0 z-10 md:hidden">
+          <ul className="m-4 ">  
+            <li className="">
+              <Link to="/">
+                <img src={logoMini} alt="logo" className="w-10" />
+              </Link>         
+            </li>              
+          </ul>
+          <ul className="flex">            
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Ayuda' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Ayuda" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faQuestionCircle} className="text-3xl" />Ayuda</Link>
+            </li>
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Login" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faCircleUser} className="text-3xl" />Ingresar</Link>
+            </li>            
+          </ul>
+        </nav>
+
+      <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900
+                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-gray-100 md:p-4">        
+        <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100 md:text-sky-800 md:justify-between">
           <ul className="space-x-4 hidden md:flex">  
             <li className="">
               <Link to="/">
@@ -15,29 +37,32 @@ export default function Navbar() {
               </Link>         
             </li>              
           </ul>
-          <ul className="flex space-x-4 ">
-            <li className="flex flex-col justify-center w-20 ">
-              <Link to="/" className="text-sky-700 hover:text-blue-500 active:text-blue-900 flex flex-col items-center text-blue-500"><FontAwesomeIcon icon={faHome} className="bg-gray-200 rounded-full p-4 md:hidden text-2xl" />Home</Link>
+
+          <ul className="flex justify-around w-full md:w-auto md:space-x-4">            
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}> 
+              <Link to="/" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faHome} className="p-1 md:hidden text-2xl" />Inicio</Link>
             </li>
-            <li className="flex flex-col justify-center w-20">
-              <Link to="/Eventos" className="text-sky-700 hover:text-blue-500 active:text-blue-900 flex flex-col items-center text-blue-500"><FontAwesomeIcon icon={faCalendarAlt} className="bg-gray-200 rounded-full p-4 md:hidden text-2xl" />Eventos</Link>
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/Acompa%C3%B1ar' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}>
+              <Link to="/Acompañar" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faPeopleGroup} className="p-1 md:hidden text-2xl" />Acompañar</Link>
             </li>
-            <li className="flex flex-col justify-center w-20">
-              <Link to="/Ejercicios" className="text-sky-700 hover:text-blue-500 active:text-blue-900 flex flex-col items-center text-blue-500"><FontAwesomeIcon icon={faPuzzlePiece} className="bg-gray-200 rounded-full p-4 md:hidden text-2xl" />Ejercicios</Link>
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/Eventos' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}>
+              <Link to="/Eventos" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faCalendar} className="p-1 md:hidden text-2xl" />Eventos</Link>
             </li>
-            <li className="flex flex-col justify-center w-20">
-              <Link to="/Acompañar" className="text-sky-700 hover:text-blue-500 active:text-blue-900 flex flex-col items-center text-blue-500"><FontAwesomeIcon icon={faPeopleGroup} className="bg-gray-200 rounded-full p-4 w-6 md:hidden text-2xl" />Acompañar</Link>
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/Ejercicios' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}>
+              <Link to="/Ejercicios" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faPuzzlePiece} className="p-1 md:hidden text-2xl" />Ejercicios</Link>
             </li>
           </ul>
-          <ul className="flex space-x-4">
-            <li className="flex flex-col justify-center w-20">
-              <Link to="/Login" className="text-sky-700 hover:text-blue-500 active:text-blue-900 flex flex-col items-center text-blue-500"><FontAwesomeIcon icon={faCircleUser} className="bg-gray-200 rounded-full p-4 md:hidden text-2xl" />Login</Link>
-            </li>            
-            <li className="flex flex-col justify-center w-20">
-              <Link to="/Ayuda" className="text-sky-700 hover:text-blue-500 active:text-blue-900 flex flex-col items-center text-blue-500"><FontAwesomeIcon icon={faQuestionCircle} className="bg-gray-200 rounded-full p-4 md:hidden text-2xl" />Ayuda</Link>
+
+          <ul className="flex space-x-4 hidden md:flex">
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Ayuda' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Ayuda" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faQuestionCircle} className="p-1 md:hidden" />Ayuda</Link>
             </li>
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Login" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center "><FontAwesomeIcon icon={faCircleUser} className="p-1 md:hidden" />Ingresar</Link>
+            </li>            
           </ul>
         </nav>
       </div>
-    );
+    </>
+  );
 }
