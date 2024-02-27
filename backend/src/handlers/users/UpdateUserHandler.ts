@@ -11,35 +11,36 @@ export default async function updateUserHandler(
     const userId = parseInt(req.params.id, 10);
     
     const {
+      aboutMe,
       address,
       birthdate,
+      country,
+      email,
+      interestIds,
       firstName,
       lastName,
-      email,
       observations,
       password,
-      purposes,//agrega la recepción de propósitos desde el body
-      interests,//Agrega la recepción de intereses desde el body
+      postalCode,
+      purposeId,
     } = req.body;
     
     const userData = {
+      aboutMe,
       address,
       birthdate,
+      country,
+      email,
       firstName,
       lastName,
-      email,
       observations,
       password,
+      postalCode,
     } as TUser;
 
-    // Llama a la función updateUser pasando los IDs de purposes e interests
-    const user = await updateUser(userId, userData, purposes, interests);
+    const user = await updateUser(userId, userData, purposeId, interestIds);
     return res.status(200).json(user);
-
     
-    
-    //const user = await updateUser(userId, userData);
-    //return res.status(200).json(user);
   } catch (error) {
     console.error("Error al intentar actualizar el usuario");
     next(error);
