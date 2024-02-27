@@ -2,7 +2,10 @@ import boom from "@hapi/boom";
 import { User } from "../../db";
 
 export default async function getUserById(userId: number) {
-  const user = await User.findByPk(userId);
+  const user = await User.findByPk(userId,{
+    attributes: {exclude : ["password"]},
+    include: { all: true },
+  });
   if (!user) throw boom.notFound("No se encontró usuario con el id provisto");
   return user;
 }
