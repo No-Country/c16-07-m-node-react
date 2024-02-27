@@ -21,6 +21,7 @@ export default async function updateUser(
   user.firstName = userData.firstName;
   user.lastName = userData.lastName;
   user.observations = userData.observations;
+  user.phone = userData.phone;
   user.postalCode = userData.postalCode;
 
   if (userData.password) {

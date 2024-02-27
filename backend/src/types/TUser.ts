@@ -1,15 +1,16 @@
 export type TUser = {
-    readonly userId: number;
-    aboutMe: string;
-    birthdate: Date;
-    country: string;
+    readonly id: number;
+    address?: string;
+    aboutMe?: string;
+    birthdate?: Date;
     createdAt: Date;
+    country?: string;
     email: string;
     firstName: string;
     lastName: string;
-    observations: string;
+    observations?: string;
     password: string;
-    postalCode: string;
+    phone: string;
+    postalCode?: string;
     updatedAt: Date;
-    address?: string;
 };

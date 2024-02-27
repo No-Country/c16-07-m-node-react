@@ -18,6 +18,7 @@ export default async function createUserHandler(
       lastName,
       observations,
       password,
+      phone,
       postalCode,
     } = req.body;
 
@@ -31,6 +32,7 @@ export default async function createUserHandler(
       lastName,
       observations,
       password,
+      phone,
       postalCode,
     } as TUser;
 

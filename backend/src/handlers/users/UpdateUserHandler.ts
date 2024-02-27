@@ -22,6 +22,7 @@ export default async function updateUserHandler(
       observations,
       password,
       postalCode,
+      phone,
       purposeId,
     } = req.body;
     
@@ -35,6 +36,7 @@ export default async function updateUserHandler(
       lastName,
       observations,
       password,
+      phone,
       postalCode,
     } as TUser;
 
