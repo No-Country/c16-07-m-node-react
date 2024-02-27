@@ -1,4 +1,6 @@
 // src/Login.tsx
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useForm } from "react-hook-form";
 
 interface IFromLogin {
@@ -20,13 +22,18 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
 
     const handleSubmitLogin = (data: IFromLogin) => {
         console.log(data);
+        //push to home 
+        window.location.href = "/";
     };
     const handleChange = () => {
         setNewUser(!newUser);
     };
 
     return (
-        <div className="max-w-sm mx-auto flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4 p-5">
+            <p className="font-bold">Inicia Sesón</p>
+
+            <p className="text-center text-2xl font-bold text-primary">Acompañar +</p>
             <form
                 onSubmit={handleSubmit(handleSubmitLogin)}
                 className="mt-8 space-y-6"
@@ -67,20 +74,34 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
                     </div>
                 </div>
 
-                <div>
+                <div className="w-full flex justify-center">
                     <button
                         type="submit"
-                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className="btn btn-primary"
                     >
                         Iniciar Sesión
                     </button>
                 </div>
             </form>
-            <button
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                onClick={handleChange}>
-                Crear cuenta
-            </button>
+            <div className="w-full flex flex-col items-center gap-5">
+                <div className="divider">O conectate con</div>
+                <div className="flex justify-center gap-5">
+                    <button className="btn btn-outline btn-primary">
+                        <FontAwesomeIcon icon={faFacebook} />
+                        Facebook
+                    </button>
+                    <button className="btn btn-outline btn-primary">
+                        <FontAwesomeIcon icon={faGoogle} />
+                        Google
+                    </button>
+                </div>
+                <p>¿No tienes cuenta?</p>
+                <button
+                    className="btn btn-secondary btn-link w-min whitespace-nowrap"
+                    onClick={handleChange}>
+                    Crear cuenta
+                </button>
+            </div>
         </div>
     );
 };
