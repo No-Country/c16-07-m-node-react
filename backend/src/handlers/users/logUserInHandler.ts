@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import { TUser } from "../../types/TUser";
 import { Request, Response } from "express";
+import { getUserWithoutPassword } from "../../Utils/helpers";
 
 export default async function logUserInHandler(req: Request, res: Response) {
   const user = req.user as TUser; //req.user fue establecido por passport en ese punto
@@ -15,22 +16,7 @@ export default async function logUserInHandler(req: Request, res: Response) {
         expiresIn: "1d",
     });
 
-  const userWithoutPassword = {
-    userId: user.id,
-    address: user.address,
-    aboutMe: user.aboutMe,
-    birthdate: user.birthdate,
-    createdAt: user.createdAt,
-    country: user.country,
-    email: user.email,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    observations: user.observations,
-    password: user.password,
-    postalCode: user.postalCode,
-    phone: user.phone,
-    updatedAt: user.updatedAt,
-  }
+  const userWithoutPassword = getUserWithoutPassword(user);
 
   return res
         .header("authorization", `Bearer ${token}`)

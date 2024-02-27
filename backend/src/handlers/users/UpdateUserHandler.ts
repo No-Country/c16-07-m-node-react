@@ -1,6 +1,7 @@
 import updateUser from "../../controllers/users/updateUser"
 import type { NextFunction, Request, Response } from "express";
 import type { TUser } from "../../types/TUser";
+import { getUserWithoutPassword } from "../../Utils/helpers";
 
 export default async function updateUserHandler(
   req: Request,
@@ -40,9 +41,10 @@ export default async function updateUserHandler(
       postalCode,
     } as TUser;
 
-    const user = await updateUser(userId, userData, purposeId, interestIds);
-    return res.status(200).json(user);
+    const user = await updateUser(userId, userData, purposeId, interestIds) as any;
+    const userWithoutPassword = getUserWithoutPassword(user);
     
+    return res.status(200).json(userWithoutPassword);
   } catch (error) {
     console.error("Error al intentar actualizar el usuario");
     next(error);
