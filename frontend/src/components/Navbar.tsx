@@ -19,7 +19,7 @@ export default function Navbar() {
         </ul>
         <ul className="flex space-x-4">
           <li>
-            <Link to="/Home" className="text-blue-900 hover:text-gray-800">Home</Link>
+            <Link to="/" className="text-blue-900 hover:text-gray-800">Home</Link>
           </li>
           <li>
             <Link to="/eventos" className="text-blue-900 hover:text-gray-800">Eventos</Link>
