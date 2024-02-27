@@ -33,8 +33,12 @@ export const Purpose = initializePurposeModel(sequelize);
 export const User = initializeUserModel(sequelize);
 
 // ACA VAN LAS RELACIONES
-User.belongsTo(Purpose);
-Purpose.hasMany(User);
+User.belongsTo(Purpose, {
+    foreignKey: "purposeId",
+});
+Purpose.hasMany(User, {
+    foreignKey: "purposeId",
+});
 
 User.belongsToMany(Interest, {through: "UsersInterests"});
 Interest.belongsToMany(User, {through: "UsersInterests"});
