@@ -38,7 +38,7 @@ const eventos = [
     image:'https://colisee.es/wp-content/uploads/2022/04/ejercicios-divertidos-para-entrenar-la-memoria-en-el-adulto-mayor.jpeg'
   }
 ];
-
+export default function EventosPage() {
 return (
     <div className="bg-gray-100">
       {/* Contenedor general con padding y ancho máximo */}
@@ -106,4 +106,4 @@ return (
       </div>
     </div>
   );
-}
+ }
