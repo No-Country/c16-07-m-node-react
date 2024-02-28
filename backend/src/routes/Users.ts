@@ -1,20 +1,21 @@
-import express from "express";
+import { Router } from "express";
+import passport from "passport";
+import  deleteUserByIdHandler from "../handlers/users/deleteUsersByIdHandler";
+import getAllUsersHandler from "../handlers/users/getAllUsersHandler";
+import  getUserByIdHandler from "../handlers/users/getUserByIdHandler";
+import  getUserByEmailHandler from "../handlers/users/getUserByEmailHandler";
+import  createUserHandler from "../handlers/users/createUserHandler";
+import  updateUserHandler from "../handlers/users/UpdateUserHandler";
+import  logUserInHandler from "../handlers/users/logUserInHandler";
 
-import { deleteUserHandler } from "../handlers/User/deleteUser";
-import { getUserByIdHandler } from "../handlers/User/getUserById";
-import { getUserByMailHandler } from "../handlers/User/getUserByMail";
-import { postUserHandler } from "../handlers/User/postUser";
-import { updateUserHandler } from "../handlers/User/updateUser";
-import { getAllUserHandler } from "../handlers/User/getAllUser";
+const userRouter = Router();
 
-const userRouter = express.Router();
-
-userRouter.get("/mail",getUserByMailHandler);
+userRouter.post("/login", passport.authenticate('local', { session: false }), logUserInHandler);
+userRouter.get("/mail", getUserByEmailHandler);
 userRouter.get("/:id",getUserByIdHandler);
-userRouter.get("/",getAllUserHandler);
-userRouter.post("/",postUserHandler);
-userRouter.delete("/:id",deleteUserHandler);
+userRouter.get("/",getAllUsersHandler);
+userRouter.post("/", createUserHandler);
 userRouter.put("/:id",updateUserHandler);
-
+userRouter.delete("/:id",deleteUserByIdHandler);
 
 export default userRouter;
