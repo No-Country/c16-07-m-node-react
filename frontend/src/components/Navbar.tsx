@@ -28,7 +28,7 @@ export default function Navbar() {
         </nav>
 
       <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900
-                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-gray-100 md:p-4">        
+                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-white md:p-4">        
         <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100 md:text-sky-800 md:justify-between">
           <ul className="space-x-4 hidden md:flex">  
             <li className="">

@@ -1,6 +1,8 @@
 export default function Ayuda() {
   return (
-    <section className="flex flex-col items-center bg-white">
+    
+    <section className="flex flex-col items-center bg-white ">
+      <div className="w-full h-0.5 bg-sky-100"></div>
       <div className="absolute overflow-hidden w-full h-3/4 bottom-[0] bg-gradient-to-t from-sky-500 opacity-40">        
       </div>
       <h1 className="text-sky-500 font-semibold my-10">FAQ</h1>
