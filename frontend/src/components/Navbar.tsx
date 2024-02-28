@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (      
     <>
-      <nav className="flex justify-between bg-white font-semibold border-b-4 border-sky-500 text-lg sticky top-0 z-10 md:hidden">
+      <nav className="flex justify-between bg-white font-semibold border-b-2 border-sky-500 text-lg sticky top-0 z-10 md:hidden">
           <ul className="m-4 ">  
             <li className="">
               <Link to="/">
@@ -27,9 +27,9 @@ export default function Navbar() {
           </ul>
         </nav>
 
-      <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900
-                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-white md:p-4">        
-        <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100 md:text-sky-800 md:justify-between">
+      <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900 
+                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-gray-100 md:p-4 md:border-b-2 md:border-sky-500">        
+        <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100  md:text-sky-800 md:justify-between">
           <ul className="space-x-4 hidden md:flex">  
             <li className="">
               <Link to="/">
