@@ -3,7 +3,7 @@ Proyecto para simulacion No Country
 
 # Acompañar+
 
-![Acompañar+ Logo](https://raw.githubusercontent.com/No-Country/c16-07-m-node-react/main/img/Logo%20principal.png)
+![Acompañar+ Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
 ## Demo Video: (Próximamente)
 
