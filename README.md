@@ -3,7 +3,7 @@ Proyecto para simulacion No Country
 
 # Acompañar+
 
-![Acompañar+ Logo](insertar-ruta-del-logo)
+![Acompañar+ Logo](https://drive.google.com/drive/u/2/folders/1nJ6Vgpn_xhFrzSCK7u5vXZAHc15s48yo)
 
 ## Demo Video: (Próximamente)
 
