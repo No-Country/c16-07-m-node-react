@@ -44,7 +44,7 @@ User.belongsToMany(Interest, {through: "UsersInterests"});
 Interest.belongsToMany(User, {through: "UsersInterests"});
 
 Interest.belongsToMany(Event, {through: "InterestsEvents"});
-Event.belongsToMany(Interest, {through: "InterestsEvents"});
+Event.belongsToMany(Interest, {through: "InterestsEvents", as: "categories"});
 
 function getAndCapitalizeModels()
 {
