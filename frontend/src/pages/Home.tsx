@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>              
 
-      <section className="bg-sky-700 text-white w-full h-fit py-10 pb-40">
+      <section className="bg-sky-700 text-white w-full h-fit py-10 pb-40" style={{ backgroundImage: 'url("https://cdn.discordapp.com/attachments/1204046580538408986/1212761904012070952/imagen_testimonio_modificada.jpg?ex=65f30389&is=65e08e89&hm=0856ab4d5f65a726fcff632c495d5ecca8d45f5e21565b5339d2f699a43bfc00&")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="text-center my-6">
           <h2 className="text-2xl font-semibold m-4">Testimonios</h2>
           <p className="text-xl p-2">Conoce la opinion de nuestra comunidad.</p>
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center ">
           <article className="w-72 bg-sky-500 rounded-xl shadow-2xl m-2">
             <div className="h-32 grid place-items-center">
-              <div className="border-2 border-black p-1.5 rounded-full">
+              <div className="border-2 border-white p-1.5 rounded-full">
                 <div className="relative h-20 w-20 rounded-full overflow-hidden">
                   <img
                     className="absolute w-full h-full top-0 left-0 object-cover"
@@ -94,7 +94,7 @@ export default function Home() {
           </article>
           <article className="w-72 bg-sky-500 rounded-xl shadow-2xl m-2">
             <div className="h-32 grid place-items-center">
-              <div className="border-2 border-black p-1.5 rounded-full">
+              <div className="border-2 border-white p-1.5 rounded-full">
                 <div className="relative h-20 w-20 rounded-full overflow-hidden">
                   <img
                     className="absolute w-full h-full top-0 left-0 object-cover"
@@ -113,7 +113,7 @@ export default function Home() {
           </article>
           <article className="w-72 bg-sky-500 rounded-xl shadow-2xl m-2">
             <div className="h-32 grid place-items-center">
-              <div className="border-2 border-black p-1.5 rounded-full">
+              <div className="border-2 border-white p-1.5 rounded-full">
                 <div className="relative h-20 w-20 rounded-full overflow-hidden">
                   <img
                     className="absolute w-full h-full top-0 left-0 object-cover"
