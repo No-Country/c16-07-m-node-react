@@ -6,3 +6,10 @@ export interface oldManDTO {
    information: string;
    age: number;
 }
+
+export interface oldManD {
+   id: number;
+   nombre: string;
+   foto: string;
+   profesion: string;
+}

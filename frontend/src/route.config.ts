@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import Login from "./pages/login";
-import MostrarOldman from "./oldMen/MostrarOldman";
+import MostrarOldman from "./components/oldMen/MostrarOldman";
 import Eventos from "./pages/Eventos";
 import Ayuda from "./pages/Ayuda";
 
