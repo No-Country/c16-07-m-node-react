@@ -1,9 +1,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 // import Button from './components/ui/button'
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Login from "../pages/login";
+
 import rutas from "./route.config";
 //import IndividualOldMan from "./oldMen/IndividualOldMan";
 
@@ -20,6 +20,7 @@ function App() {
                />
             ))}
          </Routes>
+         <Footer />
       </>
    );
 }
