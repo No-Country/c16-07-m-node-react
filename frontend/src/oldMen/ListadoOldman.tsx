@@ -1,12 +1,9 @@
 import React from "react";
-import { oldManDTO } from "./oldMen.model";
-import IndividualOldMan from "./IndividualOldMan";
 
-interface ListadoOldManProps {
-   oldmen?: oldManDTO[];
-}
 
-export default function ListadoOldMan(props: ListadoOldManProps) {
+
+
+export default function ListadoOldMan() {
    return (
       <div>
          <>
