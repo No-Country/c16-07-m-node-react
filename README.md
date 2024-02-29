@@ -3,7 +3,7 @@ Proyecto para simulacion No Country
 
 # Acompañar+
 
-![Acompañar+ Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![Acompañar+ Logo](/img/LogoPrincipal.png)
 
 ## Demo Video: (Próximamente)
 
