@@ -1,8 +1,8 @@
 # c16-07-m-node-react
 Proyecto para simulacion No Country
-
+<h1 align="center"> 
 # Acompañar+
-
+</h1>
 ![Acompañar+ Logo](img/Banner_presentation.png)
 
 ## Demo Video: (Próximamente)
