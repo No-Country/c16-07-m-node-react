@@ -1,8 +1,10 @@
 # c16-07-m-node-react
 Proyecto para simulacion No Country
 
+<h1 align="center"> 
+<img src="img/Logotipo_100-removebg-preview.png" width="60px">Acompañar+
+</h1>
 
-# Acompañar+
 
 ![Acompañar+ Logo](img/Banner_presentation.png)
 
