@@ -1,139 +1,140 @@
-import React from "react";
+import React from 'react';
 
 export default function Home() {
   return (
-    <main className="bg-secondary-content bottom-20 min-h-screen w-full text-sky-900" >
+    <div className="bg-gray-100">
+      <header className="bg-white shadow">
+        <div className="flex justify-between items-center px-6 py-4">
+          {/* Contenido del header */}
+        </div>
+      </header>
+      <main>
+      <section className="bg-sky-900 text-white py-16 px-6 text-center mx-auto max-w-7xl max-h-7xl rounded-xl shadow-2xl">
 
-      <section className="flex items-center flex-col w-full h-fit" style={{ backgroundImage: 'url("../public/assets/image/banner.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>        
-        <div className="card bg-white shadow-xl my-40 min-w-72 mx-10 ">        
-          <div className="card-body items-center text-center text-sky-900">
-            <h2 className="card-title text-4xl font-extrabold max-w-96">Conectando Generaciones</h2>
-            <p className="my-4">Un puente social para adultos mayores</p>
-            <div className="card-actions w-5/6">
-              <button className="btn bg-amber-500 hover:bg-amber-300 active:bg-amber-400 w-full font-bold">Únete Ahora</button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="flex flex-wrap justify-evenly my-10">
-        <div className="my-auto text-center">
-          <h2 className="text-2xl font-semibold m-4">Eventos</h2>          
-          <p className="text-xl p-2 mb-4">Aqui encontrarás todos los eventos de la comunidad</p>
-        </div>
-        <div className="carousel carousel-center max-w-md p-1 space-x-4 bg-neutral rounded-box">
-          <div className="carousel-item h-96 w-96">
-            <img src="https://www.mexicodestinos.com/blog/wp-content/uploads/2015/08/danzon.jpg" className="rounded-box" />
-          </div> 
-          <div className="carousel-item h-96 w-96">
-            <img src="https://www.mexicodestinos.com/blog/wp-content/uploads/2015/08/Untitled-design-6.png" className="rounded-box" />
-          </div> 
-          <div className="carousel-item h-96 w-96">
-            <img src="https://cultura.sanisidro.gob.ar/wp-content/uploads/2023/10/52498733867_3eebe0021d_o-2048x1593.jpg" className="rounded-box" />
-          </div> 
-          <div className="carousel-item h-96 w-96">
-            <img src="https://media.infocielo.com/p/23a89192ad262522a53c133ae8e8eec6/adjuntos/299/imagenes/001/580/0001580560/887x0/smart/324109505_1100884097975079_3187887053689046210_njpg.jpg" className="rounded-box" />
-          </div> 
-        </div>
-      </section>
+          <h1 className="text-3xl font-bold mb-6">
+            Compañía y Conexión
+          </h1>
+          <p className="mb-6 mx-auto max-w-3xl">
+            Encuentra nuevas amistades, comparte intereses y disfruta de momentos significativos en compañía. En Acompañar+, te ofrecemos un espacio para conectar con otros afiliados, donde cada interacción es una oportunidad para enriquecer tu vida social y emocional.
+          </p>
+          <div className="flex flex-wrap justify-center gap-12 mt-6">
 
-      <section className="w-full h-fit my-10">
-        <div className="m-auto text-center">
-          <h2 className="text-2xl font-semibold m-4">Acompañar</h2>
-          <p className="text-xl p-2">Programa encuentros, salidas o simplemente charlas para brindar o recibir compañía.</p>
-        </div>
-        <div className="flex flex-wrap justify-center ">
-          <div className="card min-w-64 max-w-96 bg-base-100 shadow-xl m-4">
-            <img src="https://media.istockphoto.com/id/174960274/es/foto/vieja-y-j%C3%B3venes-de-la-mano.jpg?s=612x612&w=0&k=20&c=xWWLBVmVowlMF00DK59A70PdlOaj-5qLEqJZq02eOak=" className="rounded-xl h-60 object-cover" />
-            <div className="card-body items-center text-center">
-              <h2 className="card-title">Interactua</h2>
-              <p>Conoce y comparte momentos con los demás</p>                
-            </div>
-          </div>
-          <div className="card min-w-64 max-w-96 bg-base-100 shadow-xl m-4">
-            <img src="https://storage-production.relish-life.com/19344/responsive-images/memory-games-senior-dementia___main-webp_1280_492.webp" className="rounded-xl h-60 object-cover" />
-            <div className="card-body items-center text-center">
-              <h2 className="card-title">Rompe la rutina</h2>
-              <p>Agiliza tus actividades físicas y cognitivas</p>                
-            </div>
-          </div>
-          <div className="card min-w-64 max-w-96 bg-base-100 shadow-xl m-4">
-            <img src="https://yourdost-blog-images.s3-ap-southeast-1.amazonaws.com/wp-content/uploads/2016/01/16204735/Helping-the-elderly.jpg" className="rounded-xl h-60 object-cover" />
-            <div className="card-body items-center text-center">
-              <h2 className="card-title">Crea nexos</h2>
-              <p>Colabora con los demás y fomenta la empatía</p>                
-            </div>
-          </div>
-        </div>
-      </section>              
-
-      <section className="bg-sky-700 text-white w-full h-fit py-10 pb-40" style={{ backgroundImage: 'url("https://cdn.discordapp.com/attachments/1204046580538408986/1212761904012070952/imagen_testimonio_modificada.jpg?ex=65f30389&is=65e08e89&hm=0856ab4d5f65a726fcff632c495d5ecca8d45f5e21565b5339d2f699a43bfc00&")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className="text-center my-6">
-          <h2 className="text-2xl font-semibold m-4">Testimonios</h2>
-          <p className="text-xl p-2">Conoce la opinion de nuestra comunidad.</p>
-        </div>
-        <div className="flex flex-wrap justify-center ">
-          <article className="w-72 bg-sky-500 rounded-xl shadow-2xl m-2">
-            <div className="h-32 grid place-items-center">
-              <div className="border-2 border-white p-1.5 rounded-full">
-                <div className="relative h-20 w-20 rounded-full overflow-hidden">
-                  <img
-                    className="absolute w-full h-full top-0 left-0 object-cover"
-                    src="https://www.65ymas.com/uploads/s1/11/51/79/9/bigstock-portrait-of-smiling-senior-man-264123457_1_621x621.jpeg"
-                  />
-                </div>
+            <div className="relative rounded-lg overflow-hidden h-56 w-44">
+              <img alt="Portrait of Mario Cortez smiling" className="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/3110392/pexels-photo-3110392.jpeg?cs=srgb&dl=pexels-marllon-cristhian-barbosa-3110392.jpg&fm=jpg" />
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-75 p-2 rounded-b-lg">
+                <p className="text-center text-white font-semibold">Mario Cortez</p>
               </div>
             </div>
-            <div className="text-white text-center bg-sky-700 p-5 rounded-xl">
-              <p className="text-2xl font-semibold">Juan Pérez</p>
-              <label className="text-xs mb-2">Jubilado</label>
-              <p className="mb-2">
-                “Gracias a Acompañar+, siento que pertenezco”
-              </p>            
-            </div>
-          </article>
-          <article className="w-72 bg-sky-500 rounded-xl shadow-2xl m-2">
-            <div className="h-32 grid place-items-center">
-              <div className="border-2 border-white p-1.5 rounded-full">
-                <div className="relative h-20 w-20 rounded-full overflow-hidden">
-                  <img
-                    className="absolute w-full h-full top-0 left-0 object-cover"
-                    src="https://st3.depositphotos.com/1011958/17204/i/450/depositphotos_172048874-stock-photo-portrait-of-smiling-beautiful-40.jpg"
-                  />
-                </div>
+            <div className="relative rounded-lg overflow-hidden h-56 w-44">
+              <img alt="Portrait of Gloria Matter looking thoughtful" className="absolute inset-0 h-full w-full object-cover" src="https://st2.depositphotos.com/1743476/44189/i/450/depositphotos_441890538-stock-photo-retired-senior-woman-laughing-her.jpg" />
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-75 p-2 rounded-b-lg">
+                <p className="text-center font-semibold">Gloria Matter</p>
               </div>
             </div>
-            <div className="text-white text-center bg-sky-700 p-5 rounded-xl">
-              <p className="text-2xl font-semibold">Ana Gómez</p>
-              <label className="text-xs mb-2">Profesora</label>
-              <p className="mb-2">
-                “Esta plataforma ha cambiado mi vida social”
-              </p>            
-            </div>
-          </article>
-          <article className="w-72 bg-sky-500 rounded-xl shadow-2xl m-2">
-            <div className="h-32 grid place-items-center">
-              <div className="border-2 border-white p-1.5 rounded-full">
-                <div className="relative h-20 w-20 rounded-full overflow-hidden">
-                  <img
-                    className="absolute w-full h-full top-0 left-0 object-cover"
-                    src="https://st.depositphotos.com/1518767/2411/i/450/depositphotos_24112411-stock-photo-happy-man-in-kitchen.jpg"
-                  />
-                </div>
+            <div className="relative rounded-lg overflow-hidden h-56 w-44">
+              <img alt="Portrait of Fabiola Ramirez laughing" className="absolute inset-0 h-full w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuVx2ML7CCIF93S3eJbybwMCA0Yn--4WHN4_PIboiAvQ&s" />
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-75 p-2 rounded-b-lg">
+                <p className="text-center font-semibold">Fabiola Ramirez</p>
               </div>
             </div>
-            <div className="text-white text-center bg-sky-700 p-5 rounded-xl">
-              <p className="text-2xl font-semibold">Luis Ramírez</p>
-              <label className="text-xs mb-2">Comerciante</label>
-              <p className="mb-2">
-                “Siempre hay algo nuevo que descubrir aquí”
-              </p>            
+            <div className="relative rounded-lg overflow-hidden h-56 w-44">
+              <img alt="Portrait of Nicolas Segura with a serene expression" className="absolute inset-0 h-full w-full object-cover" src="https://bikiniburka.org/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-15-at-12.35.36-1170x600.jpeg"/>
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-75 p-2 rounded-b-lg">
+                <p className="text-center font-semibold">Nicolas Segura</p>
+              </div>
             </div>
-          </article>
+          </div>
+        </section>
+        <section className="py-12 px-6 mx-auto max-w-7xl">
+      <h2 className="text-sky-900 text-2xl font-bold mb-6 text-center">
+        Eventos recién agregados
+      </h2>
+      <p className="mb-6 mx-auto max-w-3xl">
+  Descubre las últimas actividades y eventos locales agregados a nuestra plataforma. Desde charlas educativas hasta reuniones sociales, explora nuevas oportunidades para participar, aprender y conectar con tu comunidad en Acompañar+. Siempre hay algo emocionante por descubrir.
+</p>
+      <div className="flex gap-8">
+        <div className="text-sky-900 bg-white shadow rounded-lg overflow-hidden flex flex-col items-center w-1/3">
+          <img className="w-full h-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKp9pw_txPguMVjcdX6eSnGJUudkigMEhMeyFIigi-dw&s" alt="Charla de bienestar"/>
+          <div className="p-4">
+            <h3 className="font-bold mb-2">
+              Charla de bienestar
+            </h3>
+            <p className="text-sm mb-4">
+              Descubre cómo mejorar tu calidad de vida con consejos prácticos para el bienestar físico y emocional.
+            </p>
+          </div>
         </div>
-      </section>            
-      
-    </main>
-  )
-  ;
+        <div className="bg-white shadow rounded-lg overflow-hidden flex flex-col items-center w-1/3">
+          <img className="w-full h-auto" src="https://media.istockphoto.com/id/485907782/es/foto/abuelos-y-nietos-caminando-en-el-parque.jpg?s=612x612&w=0&k=20&c=Nyr0uyEl4u99ayPWipXXIHJQBNaKudl8cesW6asc0KE=" alt="Paseo por el Parque"/>
+          <div className="p-4">
+            <h3 className="text-sky-900 font-bold mb-2">
+              Paseo por el Parque
+            </h3>
+            <p className="text-sm mb-4">
+              Conéctate con la naturaleza y disfruta de una caminata relajante en buena compañía.
+            </p>
+          </div>
+        </div>
+        <div className="bg-white shadow rounded-lg overflow-hidden flex flex-col items-center w-1/3">
+          <img className="w-full h-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThU7UDQLB0rEMkfe0ZmuKJ0VfyjDmoYCIvR06IJAkTuw&s" alt="Tarde de Juegos de Mesa"/>
+          <div className="p-4">
+            <h3 className="text-sky-900 font-bold mb-2">
+              Tarde de Juegos de Mesa
+            </h3>
+            <p className="text-sm mb-4">
+              Ejercita tu mente y diviértete con una variedad de juegos de mesa en un ambiente amistoso y distendido.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+    <section className="py-12 px-6 bg-gradient-to-b from-sky-100 to sky-500 relative text-white">
+  <div className="text-center mb-12">
+    <h2 className="font-bold text-4xl text-sky-900">Brilla Con tus Logros</h2>
+    <p className="mx-auto leading-relaxed max-w-2xl text-lg px-6 text-sky-900 mt-6">
+      Descubre una amplia gama de ejercicios diseñados para estimular tu mente y mantener tu cuerpo en movimiento. Completa desafíos, gana estrellas y destácate entre los demás mientras trabajas en tu bienestar integral.
+    </p>
+  </div>
+  <div className="flex justify-center gap-8 mt-6">
+    {/* Imagen 1 */}
+    <div className="flex flex-col items-center w-1/5">
+      <div className="h-64 w-full rounded-lg overflow-hidden">
+        <img className="h-full w-full object-cover" src="https://concepto.de/wp-content/uploads/2018/09/fotografia2-e1537978531632.jpg" alt="Memoria"/>
+      </div>
+      <div className="w-full text-center bg-white bg-opacity-75 p-4 text-gray-800 rounded-lg shadow-md mt-4">
+        <h4 className="font-bold text-sky-900">Memoria</h4>
+        <p>Recuerda y coincide</p>
+      </div>
+    </div>
+    {/* Imagen 2 */}
+    <div className="flex flex-col items-center w-1/5">
+      <div className="h-64 w-full rounded-lg overflow-hidden">
+        <img className="h-full w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxK535JcL0OBNcAdAPRY2Z6k48pxd071uTzl70OrdY8g&s" alt="Movilidad"/>
+      </div>
+      <div className="w-full text-center bg-white bg-opacity-75 p-4 text-gray-800 rounded-lg shadow-md mt-4">
+        <h4 className="text-center font-bold text-sky-900">Movilidad</h4>
+        <p>Sesión de ejercicios</p>
+      </div>
+    </div>
+    {/* Imagen 3 */}
+    <div className="flex flex-col items-center w-1/5">
+      <div className="h-64 w-full rounded-lg overflow-hidden">
+        <img className="h-full w-full object-cover" src="https://emera-group.es/wp-content/uploads/2022/09/7_juegos_de_memoria_para_personas_mayores-900x563.webp" alt="Ingenio"/>
+      </div>
+      <div className="text-center w-full bg-white bg-opacity-75 p-4 text-gray-800 rounded-lg shadow-md mt-4">
+        <h4 className="font-bold text-sky-900">Ingenio</h4>
+        <p>Desafía tu estrategia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        {/* ... otras secciones ... */}
+      </main>
+      {/* ... footer ... */}
+    </div>
+  );
 }

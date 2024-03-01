@@ -40,8 +40,8 @@ const eventos = [
 ];
 export default function EventosPage() {
 return (
-    <div className="bg-gradient-to-t from-sky-500/30">
-      <div className="w-full h-0.5 bg-sky-100"></div>
+    <div className="bg-gradient-to-t from-sky-100/30 to sky-500">
+     
       {/* Contenedor general con padding y ancho máximo */}
       <div className="container mx-auto px-4 py-8 max-w-screen-xl">
         
