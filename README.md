@@ -107,19 +107,19 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
 
 ## Equipo
 
-| Nombre             | Rol            | LinkedIn                                                |
-| ------------------ | -------------- | ------------------------------------------------------- |
-| Aracely Cruz       | Back-End       | [LinkedIn](insertar-linkedin)                           |
-| Axel Gomez         | Back-End       | [LinkedIn](insertar-linkedin)                           |
-| Jesús Enrique Pérez| Back-End       | [LinkedIn](insertar-linkedin)                           |
-| Luis Corales       | Back-End       | [LinkedIn](insertar-linkedin)                           |
-| FacKu Salvatierra  | Front-End      | [LinkedIn](insertar-linkedin)                           |
-| Diego Gloria Salas | Front-End      | [LinkedIn](insertar-linkedin)                           |
-| Eliazar Suarez     | Front-End      | [LinkedIn](insertar-linkedin)                           |
-| Mauricio Barragán  | Front-End      | [LinkedIn](insertar-linkedin)                           |
-| Nicolas Gomez Reyes| Front-End      | [LinkedIn](insertar-linkedin)                           |
-| Ana Laura Rodriguez| UX / UI        | [LinkedIn](insertar-linkedin)                           |
-| Julian Pugliese    | UX / UI        | [LinkedIn](insertar-linkedin)                           |
+| Nombre             | Rol            | LinkedIn                                                | Portfolio                                               |
+| ------------------ | -------------- | ------------------------------------------------------- |-------------------------------------------------------- |
+| Aracely Cruz       | Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Axel Gomez         | Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Jesús Enrique Pérez| Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Luis Corales       | Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| FacKu Salvatierra  | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Diego Gloria Salas | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Eliazar Suarez     | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Mauricio Barragán  | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Nicolas Gomez Reyes| Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Ana Laura Rodriguez| UX / UI        | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
+| Julian Pugliese    | UX / UI        | [LinkedIn](insertar-linkedin)                           |[https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=00436C&logo=Behance&logoColor=FFFFFF&label=](https://www.behance.net/julianpugliese)|
 
 ## Presentación
 
