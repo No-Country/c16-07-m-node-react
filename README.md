@@ -105,23 +105,230 @@ npm run dev
 
 Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) para ver la aplicación en funcionamiento.
 
-## Equipo
+<!-- TEAMS -->
 
-| Nombre             | Rol            | LinkedIn                                                | Portfolio                                               |
-| ------------------ | -------------- | ------------------------------------------------------- |-------------------------------------------------------- |
-| Aracely Cruz       | Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Axel Gomez         | Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Jesús Enrique Pérez| Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Luis Corales       | Back-End       | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| FacKu Salvatierra  | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Diego Gloria Salas | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Eliazar Suarez     | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Mauricio Barragán  | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Nicolas Gomez Reyes| Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Ana Laura Rodriguez| UX / UI        | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Julian Pugliese    | UX / UI        | [LinkedIn](insertar-linkedin)                           |<a href="https://www.behance.net/julianpugliese" target="_blank"> 
-                                                                                                 <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=00436C&logo=Behance&logoColor=FFFFFF&label="/>
-        </a>|
+<h1 align="center"> 
+<img src="https://media1.giphy.com/media/gF2m2JOyGReppog8hU/giphy.gif" width="60px">Equipo
+</h1>
+
+<table>
+  <tr>
+    <td>
+      <div align="center">
+        <a href="https://github.com/aracely33" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/33846439?v=4"/>
+        </a>
+        <a href="https://github.com/aracely33" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Aracely Cruz</h4>
+          <h4 style="margin-top: 1rem;">BackEnd</h4>
+        </a>
+        <a href="https://github.com/aracely33" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/aracruzdelangel/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://github.com/Axel3890" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/111620032?v=4"/>
+        </a>
+        <a href="https://github.com/Axel3890" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Axel Gomez</h4>
+          <h4 style="margin-top: 1rem;">BackEnd</h4>
+        </a>
+        <a href="https://github.com/Axel3890" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/axel-gomez-sosa" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+        <td>
+      <div align="center">
+        <a href="https://github.com/PerezEnrique" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/57626643?v=4"/>
+        </a>
+        <a href="https://github.com/PerezEnrique" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Jesus Enrique Perez</h4>
+          <h4 style="margin-top: 1rem;">Backend</h4>
+        </a>
+        <a href="https://github.com/PerezEnrique" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/enrique-perez28" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://github.com/ioskpu" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/15864299?v=4"/>
+        </a>
+        <a href="https://github.com/ioskpu" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Luis Corales</h4>
+          <h4 style="margin-top: 1rem;">Backend</h4>
+        </a>
+        <a href="https://github.com/ioskpu" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/lrcorales" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <div align="center">
+        <a href="https://github.com/FacKuSalvatierra" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/98361543?v=4"/>
+        </a>
+        <a href="https://github.com/FacKuSalvatierra" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Facku Salvatierra</h4>
+          <h4 style="margin-top: 1rem;">Frontend Developer</h4>
+        </a>
+        <a href="https://github.com/FacKuSalvatierra" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/facundo-salvatierra/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://github.com/DiegoLGS" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/106618964?v=4"/>
+        </a>
+        <a href="https://github.com/DiegoLGS" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Diego Gloria Salas</h4>
+          <h4 style="margin-top: 1rem;">Frontend Developer</h4>
+        </a>
+        <a href="https://github.com/DiegoLGS" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/diego-leonardo-gloria-salas-43b56323a/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://github.com/Eliazar08" target="_blank" rel="author">
+          <img width="110" src="https://www.linkedin.com/in/eliazar-alberto-suarez-7b2432193/overlay/photo/"/>
+        </a>
+        <a href="https://github.com/Eliazar08" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Eliazar Suarez</h4>
+          <h4 style="margin-top: 1rem;">Frontend Developer</h4>
+        </a>
+        <a href="https://github.com/Eliazar08" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/eliazar-alberto-suarez-7b2432193/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://github.com/Mauroariza" target="_blank" rel="author">
+          <img width="110" src="https://www.linkedin.com/in/mauricio-barrag%C3%A1n-ariza/overlay/photo/"/>
+        </a>
+        <a href="https://github.com/Mauroariza" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Mauricio Ariza</h4>
+          <h4 style="margin-top: 1rem;">Frontend Developer</h4>
+        </a>
+        <a href="https://github.com/Mauroariza" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/mauricio-barrag%C3%A1n-ariza/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <div align="center">
+        <a href="https://github.com/Jhairo123" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/132602554?v=4"/>
+        </a>
+        <a href="https://github.com/Jhairo123" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Nico Gomez Reyes</h4>
+          <h4 style="margin-top: 1rem;">Frontend Developer</h4>
+        </a>
+        <a href="https://github.com/Jhairo123" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/jhair-nicolas-gomez-reyes/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://www.behance.net/dirodriguezb?tracking_source=search_users|Ana%20laura%20rodriguez" target="_blank" rel="author">
+          <img width="110" src="https://www.linkedin.com/in/alaurarodriguez/overlay/photo/"/>
+        </a>
+        <a href="https://www.behance.net/dirodriguezb?tracking_source=search_users|Ana%20laura%20rodriguez" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Ana Laura Rodriguez</h4>
+          <h4 style="margin-top: 1rem;">UX/UI Designer</h4>
+        </a>
+        <a href="https://www.behance.net/dirodriguezb?tracking_source=search_users|Ana%20laura%20rodriguez" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=00436C&logo=Behance&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/alaurarodriguez/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="https://www.behance.net/julianpugliese" target="_blank" rel="author">
+          <img width="110" src="https://avatars.githubusercontent.com/u/159448542?v=4"/>
+        </a>
+        <a href="https://www.behance.net/julianpugliese" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Julian Pugliese</h4>
+          <h4 style="margin-top: 1rem;">UX/UI Designer</h4>
+        </a>
+        <a href="https://www.behance.net/julianpugliese" target="_blank">
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=00436C&logo=Behance&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/jotapugliese/" target="_blank">
+          <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <a href="" target="_blank" rel="author">
+          <img width="110" src=""/>
+        </a>
+        <a href="" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;"></h4>
+          <h4 style="margin-top: 1rem;"></h4>
+        </a>
+        <a href="" target="_blank">
+          <img src=""/>
+        </a>
+        <a href="" target="_blank">
+          <img src=""/>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
 
 ## Presentación
 
