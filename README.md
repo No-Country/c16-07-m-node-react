@@ -26,16 +26,25 @@ Adaptando el punto 3 de los Objetivos de Desarrollo Sostenible (ODS) para "Acomp
 **ODS 3: Salud y Bienestar**
 Garantizar una vida saludable y promover el bienestar para todos en todas las edades, incluida la promoción del bienestar emocional y físico de los adultos mayores a través de actividades sociales y de cuidado personalizado.
 
-## Tecnologías Utilizadas
+<h1 align="center"> 
+<img src="https://media0.giphy.com/media/uhQuegHFqkVYuFMXMQ/giphy.gif" width="60px">Tecnologias Usadas
+</h1>
 
-- ![Vite.js Logo](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) **Vite.js**: Un entorno de desarrollo rápido para aplicaciones web modernas.
-- ![Tailwind CSS Logo](insertar-ruta-del-logo) **Tailwind CSS**: Un framework de CSS utilitario para diseñar rápidamente interfaces de usuario.
-- ![Next.js UI Logo](insertar-ruta-del-logo) **Next.js UI**: Una biblioteca de componentes de interfaz de usuario para React y Next.js.
-- ![Daysi CSS Logo](insertar-ruta-del-logo) **Daysi CSS**: Una biblioteca de estilos CSS personalizados para mejorar la apariencia de la aplicación.
-- ![Python Logo](insertar-ruta-del-logo) **Python**: Un lenguaje de programación utilizado para el desarrollo del backend.
-- ![Django Logo](insertar-ruta-del-logo) **Django**: Un framework de desarrollo web de alto nivel en Python.
-- ![Node.js Logo](insertar-ruta-del-logo) **Node.js**: Un entorno de tiempo de ejecución de JavaScript utilizado para el desarrollo del frontend.
-- ![Figma Logo](insertar-ruta-del-logo) **Figma**: Una herramienta de diseño colaborativo utilizada para crear y prototipar la interfaz de usuario.
+![Node.js](https://img.shields.io/static/v1?style=for-the-badge&message=Node.js&color=339933&logo=Node.js&logoColor=FFFFFF&label=)
+![Express](https://img.shields.io/static/v1?style=for-the-badge&message=Express&color=000000&logo=Express&logoColor=FFFFFF&label=)
+![PostgreSQL](https://img.shields.io/static/v1?style=for-the-badge&message=PostgreSQL&color=4169E1&logo=PostgreSQL&logoColor=FFFFFF&label=)
+![React](https://img.shields.io/static/v1?style=for-the-badge&message=React&color=222222&logo=React&logoColor=61DAFB&label=)
+![Next.js](https://img.shields.io/static/v1?style=for-the-badge&message=Next.js&color=000000&logo=Next.js&logoColor=FFFFFF&label=)
+![MUI](https://img.shields.io/static/v1?style=for-the-badge&message=MUI&color=007FFF&logo=MUI&logoColor=FFFFFF&label=)
+![Yup](https://img.shields.io/badge/Yup-crimson?style=for-the-badge&logo=Yup&logoColor=fff)
+![Formik](https://img.shields.io/badge/Formik-172B4D?style=for-the-badge&logo=Formik&logoColor=fff)
+![Render](https://img.shields.io/static/v1?style=for-the-badge&message=Render&color=222222&logo=Render&logoColor=46E3B7&label=)
+![Vercel](https://img.shields.io/static/v1?style=for-the-badge&message=Vercel&color=000000&logo=Vercel&logoColor=FFFFFF&label=)
+![Stripe](https://img.shields.io/static/v1?style=for-the-badge&message=Stripe&color=008CDD&logo=Stripe&logoColor=FFFFFF&label=)
+![date-fns](https://img.shields.io/badge/date-fns-123456)
+![ReactDatePicker](https://img.shields.io/badge/ReactDatePicker-123456)
+![SweetAlert2](https://img.shields.io/badge/SweetAlert2-123456)
+![Jitsi](https://img.shields.io/badge/Jitsi-123456)
 
   <!-- Organización -->
 <h1 align="center"> 
@@ -339,6 +348,15 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
 ## Licencia
 
 (desarrollar licencia)
+
+<!-- ACKNOWLEDGMENTS -->
+
+<div align='center'>
+<h3>Agradecimientos</h3>
+  <a href="https://www.nocountry.tech/" target="_blank">
+    <img style='background-color:black;' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsukYB3HL90LSwYv_RIR2O2OlCV8Sbkx2eNHv8nRvOu8L16FxLQ0nPzY02wQ_BJOfQZw&usqp=CAU" width="200">
+  </a>
+</div>
 
 ## Contacto
 
