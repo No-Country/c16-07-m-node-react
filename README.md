@@ -119,7 +119,9 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
 | Mauricio Barragán  | Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
 | Nicolas Gomez Reyes| Front-End      | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
 | Ana Laura Rodriguez| UX / UI        | [LinkedIn](insertar-linkedin)                           |[LinkedIn](insertar-linkedin)                            |
-| Julian Pugliese    | UX / UI        | [LinkedIn](insertar-linkedin)                           |[https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=00436C&logo=Behance&logoColor=FFFFFF&label=](https://www.behance.net/julianpugliese)|
+| Julian Pugliese    | UX / UI        | [LinkedIn](insertar-linkedin)                           |<a href="https://www.behance.net/julianpugliese" target="_blank"> 
+                                                                                                 <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=00436C&logo=Behance&logoColor=FFFFFF&label="/>
+        </a>|
 
 ## Presentación
 
