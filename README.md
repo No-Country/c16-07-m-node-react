@@ -41,6 +41,7 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 <img src="https://media2.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif" width="30px">Organización
 </h1>
 
+<h1 align="center">
 <a href="https://trello.com" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain-wordmark.svg" alt="Logo" width="96" height="96">
 </a>
@@ -56,6 +57,7 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 <a href="https://discord.com/" target="_blank">
   <img src="https://img.icons8.com/color/480/discord-new-logo.png" alt="Logo" width="96" height="96">
 </a>
+</h1>
 
 ## Planteo de los POV
 
