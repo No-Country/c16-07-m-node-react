@@ -3,7 +3,7 @@ Proyecto para simulacion No Country
 
 # Acompañar+
 
-![Acompañar+ Logo](/img/LogoPrincipal.png)
+![Acompañar+ Logo](img/Banner_presentation.png)
 
 ## Demo Video: (Próximamente)
 
