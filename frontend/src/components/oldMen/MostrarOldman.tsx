@@ -1,3 +1,4 @@
+import CardHome from "../CardHome";
 import ListadoOldMan from "./ListadoOldman";
 import { oldManD } from "./oldMen.model";
 
@@ -31,9 +32,9 @@ export default function MostrarOldman() {
    ];
    return (
       <>
-         <div className="flex">
+         <div className="flex items-center justify-center mb-2 ">
             {oldmen.map((oldman) => (
-               <ListadoOldMan oldman={oldman} key={oldman.id} />
+               <CardHome oldman={oldman} key={oldman.id} />
             ))}
          </div>
       </>
