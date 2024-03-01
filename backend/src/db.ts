@@ -46,7 +46,7 @@ Interest.belongsToMany(User, {through: "UsersInterests"});
 
 Interest.belongsToMany(Event, {through: "InterestsEvents"});
 Event.belongsToMany(Interest, {through: "InterestsEvents", as: "categories"});
-User.belongsToMany(Event, {through: "UsersEvents"});
+User.belongsToMany(Event, {through: "UsersEvents", as:"events"});
 Event.belongsToMany(User,{through: "UsersEvents"});
 
 
