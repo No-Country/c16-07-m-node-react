@@ -41,11 +41,11 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 <img src="https://media2.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif" width="30px">Organización
 </h1>
 
-<a href="https://trello.com/b/Q0G3my8O/sb-klinika" target="_blank">
+<a href="https://trello.com" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain-wordmark.svg" alt="Logo" width="96" height="96">
 </a>
 
-<a href="https://www.figma.com/file/bRdQnlyWWehoRQbuwGENaJ/Klinica?type=design&node-id=0-1&mode=design&t=JrVs2p5rFJvPFzCk-0" target="_blank">
+<a href="https://www.figma.com/file/Fmz8nOyIDyHWHiLfNsiO0d/No-Country?type=whiteboard&node-id=0%3A1&t=sSNXweHANnczoYx6-1" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Logo" width="96" height="96">
 </a>
 
@@ -53,7 +53,7 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Logo" width="96" height="96">
 </a>
 
-<a href="https://discord.gg/Zj2GmPwg" target="_blank">
+<a href="https://discord.com/" target="_blank">
   <img src="https://img.icons8.com/color/480/discord-new-logo.png" alt="Logo" width="96" height="96">
 </a>
 
