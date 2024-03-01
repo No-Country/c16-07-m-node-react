@@ -35,16 +35,17 @@ export const User = initializeUserModel(sequelize);
 // ACA VAN LAS RELACIONES
 User.belongsTo(Purpose, {
     foreignKey: "purposeId",
+    as: "purpose"
 });
 Purpose.hasMany(User, {
     foreignKey: "purposeId",
 });
 
-User.belongsToMany(Interest, {through: "UsersInterests"});
+User.belongsToMany(Interest, {through: "UsersInterests", as: "interests"});
 Interest.belongsToMany(User, {through: "UsersInterests"});
 
 Interest.belongsToMany(Event, {through: "InterestsEvents"});
-Event.belongsToMany(Interest, {through: "InterestsEvents"});
+Event.belongsToMany(Interest, {through: "InterestsEvents", as: "categories"});
 
 function getAndCapitalizeModels()
 {
