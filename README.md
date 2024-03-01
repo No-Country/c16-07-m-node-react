@@ -36,6 +36,27 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 - ![Node.js Logo](insertar-ruta-del-logo) **Node.js**: Un entorno de tiempo de ejecución de JavaScript utilizado para el desarrollo del frontend.
 - ![Figma Logo](insertar-ruta-del-logo) **Figma**: Una herramienta de diseño colaborativo utilizada para crear y prototipar la interfaz de usuario.
 
+  <!-- Organización -->
+<h1 align="center"> 
+<img src="https://media2.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif" width="30px">Organización
+</h1>
+
+<a href="https://trello.com/b/Q0G3my8O/sb-klinika" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain-wordmark.svg" alt="Logo" width="96" height="96">
+</a>
+
+<a href="https://www.figma.com/file/bRdQnlyWWehoRQbuwGENaJ/Klinica?type=design&node-id=0-1&mode=design&t=JrVs2p5rFJvPFzCk-0" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Logo" width="96" height="96">
+</a>
+
+<a href="https://www.nocountry.tech/" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Logo" width="96" height="96">
+</a>
+
+<a href="https://discord.gg/Zj2GmPwg" target="_blank">
+  <img src="https://img.icons8.com/color/480/discord-new-logo.png" alt="Logo" width="96" height="96">
+</a>
+
 ## Planteo de los POV
 
 **POV1:**
