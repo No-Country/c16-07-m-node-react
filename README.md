@@ -39,7 +39,7 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 
   <!-- Organización -->
 <h1 align="center"> 
-<img src="https://media2.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif" width="30px">Organización
+<img src="https://media2.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif" width="60px">Organización
 </h1>
 
 <h1 align="center">
@@ -223,7 +223,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
     <td>
       <div align="center">
         <a href="https://github.com/Eliazar08" target="_blank" rel="author">
-          <img width="110" src="https://www.linkedin.com/in/eliazar-alberto-suarez-7b2432193/overlay/photo/"/>
+          <img width="110" src="https://avatars.githubusercontent.com/u/93342246?v=4"/>
         </a>
         <a href="https://github.com/Eliazar08" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Eliazar Suarez</h4>
@@ -240,7 +240,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
     <td>
       <div align="center">
         <a href="https://github.com/Mauroariza" target="_blank" rel="author">
-          <img width="110" src="https://www.linkedin.com/in/mauricio-barrag%C3%A1n-ariza/overlay/photo/"/>
+          <img width="110" src="https://avatars.githubusercontent.com/u/65140672?v=4"/>
         </a>
         <a href="https://github.com/Mauroariza" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Mauricio Ariza</h4>
@@ -311,22 +311,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
       </div>
     </td>
     <td>
-      <div align="center">
-        <a href="" target="_blank" rel="author">
-          <img width="110" src=""/>
-        </a>
-        <a href="" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;"></h4>
-          <h4 style="margin-top: 1rem;"></h4>
-        </a>
-        <a href="" target="_blank">
-          <img src=""/>
-        </a>
-        <a href="" target="_blank">
-          <img src=""/>
-        </a>
-      </div>
-    </td>
+      
   </tr>
 </table>
 
