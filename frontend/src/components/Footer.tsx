@@ -5,7 +5,7 @@ import { faFacebook, faXTwitter, faYoutube, faLinkedin } from '@fortawesome/free
 
 export default function Navbar() {  
   return (  
-    <footer className="hidden md:relative md:flex justify-evenly py-8 bg-white z-10 ">
+    <footer className="hidden border-t-2 border-sky-500 md:relative md:flex justify-evenly py-8 bg-white z-10">
       <div>  
         <Link to="/">
           <img src={logo} alt="logo" className="w-64" />
