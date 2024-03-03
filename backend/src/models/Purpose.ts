@@ -4,7 +4,7 @@ export default function initializePuroseModel(sequelize: Sequelize) {
   return sequelize.define(
     "Purposes",
     {
-      idPurposes: {
+      id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,

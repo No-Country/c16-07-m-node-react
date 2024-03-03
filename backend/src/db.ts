@@ -34,11 +34,11 @@ export const User = initializeUserModel(sequelize);
 
 // ACA VAN LAS RELACIONES
 User.belongsTo(Purpose, {
-    foreignKey: {
-        "name": "purposeId"
-    }
+    foreignKey: "purposeId",
 });
-Purpose.hasMany(User);
+Purpose.hasMany(User, {
+    foreignKey: "purposeId",
+});
 
 User.belongsToMany(Interest, {through: "UsersInterests"});
 Interest.belongsToMany(User, {through: "UsersInterests"});
