@@ -5,7 +5,7 @@ import server from "./server";
 const PORT = process.env.PORT || 3001; //uso del .env para el puerto
 
 sequelize
-  .sync({ force: true })
+  .sync()
   .then(() => {
     server.listen(PORT, () => {
       console.log(`Server listening on port ${PORT}`);
