@@ -5,11 +5,13 @@ import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 
 import rutas from "./route.config";
+import { UserRegistrationProvider } from "./context/UserRegistrationContext";
 //import IndividualOldMan from "./oldMen/IndividualOldMan";
 
 function App() {
    return (
       <>
+      <UserRegistrationProvider>
          <Navbar />
          <Routes>
             {rutas.map((ruta) => (
@@ -21,6 +23,7 @@ function App() {
             ))}
          </Routes>
          <Footer />
+         </UserRegistrationProvider>
       </>
    );
 }

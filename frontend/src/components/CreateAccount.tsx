@@ -1,99 +1,284 @@
-import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons/faGoogle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import CompleteAccount from "./CompleteAccount";
+import { UserRegistrationContext } from "../context/UserRegistrationContext";
+import { registerUser } from "../api/authRegister";
+import { useState } from "react";
 
-interface ICreateAccount {
-  username: string;
+interface CreateAccountFormData {
+  address: string;
+  aboutMe: string;
+  birthdate: string;
+  country: string;
   email: string;
+  firstName: string;
+  lastName: string;
+  observations: string;
   password: string;
+  phone: string;
+  postalCode: string;
 }
-
 interface IProps {
   newUser: boolean;
   setNewUser: (value: boolean) => void;
 }
 
 export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
-  const [createAccount, setCreateAccount] = useState(true);
-
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<ICreateAccount>();
+  } = useForm<CreateAccountFormData>();
+  const { setUserData } = useContext(UserRegistrationContext);
 
-  const handleCreateAccount = (data: ICreateAccount) => {
-    console.log(data);
-    if(data !== null){
-      setCreateAccount(!createAccount);
+  const [alert, setAlert] = useState({ show: false, message: "" });
+
+  const handleCreateAccount = async (data: CreateAccountFormData) => {
+    try {
+      const userData = await registerUser(data);
+      setUserData(userData);
+      setAlert({ show: true, message: "Usuario creado correctamente" });
+
+      setTimeout(() => {
+        handleChange(); // Llama a handleChange que redirecciona al inicio de sesión
+      }, 1000); // Redirige después de 1 segundo
+      // Aquí se puede dirigir al usuario o mostrar un mensaje de éxito
+    } catch (error) {
+      console.error(error);
+      // Aquí  se puede mostrar un mensaje de error al usuario
     }
   };
-
   const handleChange = () => {
     setNewUser(!newUser);
   };
 
   return (
-    <div className="w-full flex flex-col gap-4 p-5">
-      {createAccount ? (
-        <>
-          <h1 className="text-center">Crear cuenta</h1>
-          <form
-            onSubmit={handleSubmit(handleCreateAccount)}
-            className="flex flex-col gap-3"
-          >
-            <input
-              type="text"
-              placeholder="Nombre de usuario"
-              className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              {...register("username")}
-            />
-            {errors.username && <span>Usuario es requerido</span>}
-            <input
-              type="text"
-              placeholder="Correo"
-              {...register("email")}
-              className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            />
-            {errors.email && <span>Email es requerido</span>}
-            <input
-              type="password"
-              placeholder="Contraseña"
-              {...register("password")}
-              className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            />
-            {errors.password && <span>Constraseña es requerida</span>}
-            <button type="submit" className="w-full btn btn-primary ">
-              Crear cuenta
-            </button>
-          </form>
-          <div className="w-full flex flex-col items-center gap-5">
-            <div className="divider">O conectate con</div>
-            <div className="flex justify-center gap-5">
-              <button className="btn btn-outline btn-primary">
-                <FontAwesomeIcon icon={faFacebook} />
-                Facebook
-              </button>
-              <button className="btn btn-outline btn-primary">
-                <FontAwesomeIcon icon={faGoogle} />
-                Google
-              </button>
-            </div>
-            <p>¿Ya tienes una cuenta?</p>
-            <button
-              className="btn btn-secondary btn-link w-min whitespace-nowrap"
-              onClick={handleChange}
-            >
-              Iniciar sesión
-            </button>
+    <section className="w-full max-w-xl mx-auto p-8 bg-white rounded-lg shadow-md">
+      {alert.show && (
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div className="bg-sky-200 font-semibold text-black text-center p-4 rounded-lg shadow-lg max-w-sm">
+            {alert.message}
           </div>
-        </>
-      ) : (
-        <CompleteAccount />
+        </div>
       )}
-    </div>
+
+      <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+        Crear Cuenta
+      </h1>
+      <form onSubmit={handleSubmit(handleCreateAccount)} className="space-y-6">
+        <div>
+          <label
+            htmlFor="firstName"
+            className="text-sm font-medium text-gray-700"
+          >
+            Nombre
+          </label>
+          <input
+            id="firstName"
+            {...register("firstName", { required: true })}
+            placeholder="Nombre"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.firstName && (
+            <span className="text-xs text-red-600">
+              El nombre es requerido.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="lastName"
+            className="text-sm font-medium text-gray-700"
+          >
+            Apellido
+          </label>
+          <input
+            id="lastName"
+            {...register("lastName", { required: true })}
+            placeholder="Apellido"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.lastName && (
+            <span className="text-xs text-red-600">
+              El apellido es requerido.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="email" className="text-sm font-medium text-gray-700">
+            Correo electrónico
+          </label>
+          <input
+            id="email"
+            {...register("email", { required: true })}
+            placeholder="Correo electrónico"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.email && (
+            <span className="text-xs text-red-600">
+              El correo electrónico es requerido.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="password"
+            className="text-sm font-medium text-gray-700"
+          >
+            Contraseña
+          </label>
+          <input
+            id="password"
+            type="password"
+            {...register("password", { required: true })}
+            placeholder="Contraseña"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.password && (
+            <span className="text-xs text-red-600">
+              La contraseña es requerida.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="phone" className="text-sm font-medium text-gray-700">
+            Teléfono
+          </label>
+          <input
+            id="phone"
+            {...register("phone", { required: true })}
+            placeholder="Teléfono"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.phone && (
+            <span className="text-xs text-red-600">
+              El teléfono es requerido.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="address"
+            className="text-sm font-medium text-gray-700"
+          >
+            Dirección
+          </label>
+          <input
+            id="address"
+            {...register("address", { required: true })}
+            placeholder="Dirección"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.address && (
+            <span className="text-xs text-red-600">
+              La dirección es requerida.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="country"
+            className="text-sm font-medium text-gray-700"
+          >
+            País
+          </label>
+          <input
+            id="country"
+            {...register("country", { required: true })}
+            placeholder="País"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.country && (
+            <span className="text-xs text-red-600">El país es requerido.</span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="postalCode"
+            className="text-sm font-medium text-gray-700"
+          >
+            Código postal
+          </label>
+          <input
+            id="postalCode"
+            {...register("postalCode", { required: true })}
+            placeholder="Código postal"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.postalCode && (
+            <span className="text-xs text-red-600">
+              El código postal es requerido.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="birthdate"
+            className="text-sm font-medium text-gray-700"
+          >
+            Fecha de nacimiento
+          </label>
+          <input
+            id="birthdate"
+            type="date"
+            {...register("birthdate", { required: true })}
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+          {errors.birthdate && (
+            <span className="text-xs text-red-600">
+              La fecha de nacimiento es requerida.
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="aboutMe"
+            className="text-sm font-medium text-gray-700"
+          >
+            Sobre mí
+          </label>
+          <textarea
+            id="aboutMe"
+            {...register("aboutMe")}
+            placeholder="Sobre mí"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="observations"
+            className="text-sm font-medium text-gray-700"
+          >
+            Observaciones
+          </label>
+          <textarea
+            id="observations"
+            {...register("observations")}
+            placeholder="Observaciones"
+            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          >
+            Crear Cuenta
+          </button>
+        </div>
+      </form>
+    </section>
   );
 };
+
+export default CreateAccount;

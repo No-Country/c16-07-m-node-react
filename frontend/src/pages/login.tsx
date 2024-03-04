@@ -8,9 +8,7 @@ export default function Login() {
 
   const [newUser, setNewUser] = useState(true)
 
-  const handleNewUser = () => {
-    setNewUser(!newUser)
-  }
+ 
   return (
     <div className="w-full flex flex-row gap-3">
       <div className="w-full flex flex-col items-center">
@@ -18,9 +16,9 @@ export default function Login() {
       </div>
       <div className="w-full flex flex-col items-start">
         {newUser ?
-          <LoginUser newUser setNewUser={handleNewUser} />
+          <LoginUser newUser={newUser} setNewUser={setNewUser} />
           :
-          <CreateAccount newUser setNewUser={handleNewUser} />
+          <CreateAccount newUser={newUser} setNewUser={setNewUser} />
         }
       </div>
     </div>
