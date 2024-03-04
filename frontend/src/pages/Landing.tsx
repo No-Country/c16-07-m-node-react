@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Landing() {
   return (
     <main className="bg-secondary-content bottom-20 min-h-screen w-full text-sky-900" >
 
