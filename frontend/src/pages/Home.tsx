@@ -9,9 +9,9 @@ export default function Home() {
         <div className="card bg-white shadow-xl my-40 min-w-72 mx-10 ">        
           <div className="card-body items-center text-center text-sky-900">
             <h2 className="card-title text-4xl font-extrabold max-w-96">Conectando Generaciones</h2>
-            <p className="my-4">Un puente social para adultos mayores</p>
+            <p className="my-4 font-bold">Un puente social para adultos mayores</p>
             <div className="card-actions w-5/6">
-              <button className="btn bg-amber-500 hover:bg-amber-400 active:bg-amber-300 w-full font-bold">Únete Ahora</button>
+              <Link to="/Login" className="btn text-xl bg-amber-500 hover:bg-amber-400 active:bg-amber-300 w-full font-bold">Únete Ahora</Link>
             </div>
           </div>
         </div>
