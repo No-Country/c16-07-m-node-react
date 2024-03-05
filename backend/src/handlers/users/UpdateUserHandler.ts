@@ -1,7 +1,6 @@
 import updateUser from "../../controllers/users/updateUser"
 import type { NextFunction, Request, Response } from "express";
 import type { TUser } from "../../types/TUser";
-import { getUserWithoutPassword } from "../../Utils/helpers";
 
 export default async function updateUserHandler(
   req: Request,
@@ -17,6 +16,7 @@ export default async function updateUserHandler(
       birthdate,
       country,
       email,
+      imageUrl,
       interestIds,
       firstName,
       lastName,
@@ -33,6 +33,7 @@ export default async function updateUserHandler(
       birthdate,
       country,
       email,
+      imageUrl,
       firstName,
       lastName,
       observations,
