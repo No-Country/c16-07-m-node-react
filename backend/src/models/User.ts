@@ -16,22 +16,16 @@ export default function initializeUserModel(sequelize: Sequelize) {
         type: DataTypes.STRING,
       },
       birthdate: {
-        type: DataTypes.STRING,
-        validate: {
-          isDateFormat: function (value: any) {
-            if (!/\d{4}-\d{2}-\d{2}/.test(value)) {
-              throw new Error(
-                "The field release must have the format YYYY-MM-DD."
-              );
-            }
-          },
-        },
+        type: DataTypes.DATE,
       },
       createdAt: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
       },
       country: {
+        type: DataTypes.STRING,
+      },
+      imageUrl: {
         type: DataTypes.STRING,
       },
       email: {
