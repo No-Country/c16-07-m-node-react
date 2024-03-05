@@ -337,7 +337,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
 
 ## Presentación
 
-[Presentación de Figma](https://www.figma.com/file/CoG0QSCnLHkPdSCQJdqNRp/Presentacion-NoCountry?type=design&node-id=2%3A32&mode=design&t=VjsGoLQOt21kxptN-1)
+[Presentación de Figma](https://www.figma.com/proto/48RNmQumGmIC24IXswzsAn/DEMO-DAY?type=design&node-id=1-3&t=SRrhcrkCsFipF31l-1&scaling=contain&page-id=0%3A1&mode=design)
 
 ## Diseño/Mockup
 
