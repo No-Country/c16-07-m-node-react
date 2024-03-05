@@ -9,6 +9,9 @@ export default function initializeEventModel(sequelize: Sequelize) {
         autoIncrement: true,
         primaryKey: true,
       },
+      imageUrl: {
+        type: DataTypes.STRING,
+      },
       locate: {
         type: DataTypes.STRING,
       },
