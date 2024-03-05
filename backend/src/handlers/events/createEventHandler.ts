@@ -12,7 +12,6 @@ export default async function createEventHandler(
     
     const eventData = {
       locate: locate,
-      category: category,
       name: name,
       description: description,
     } as TEvent;
