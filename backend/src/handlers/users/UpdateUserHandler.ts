@@ -42,9 +42,8 @@ export default async function updateUserHandler(
     } as TUser;
 
     const user = await updateUser(userId, userData, purposeId, interestIds) as any;
-    const userWithoutPassword = getUserWithoutPassword(user);
     
-    return res.status(200).json(userWithoutPassword);
+    return res.status(200).json(user);
   } catch (error) {
     console.error("Error al intentar actualizar el usuario");
     next(error);
