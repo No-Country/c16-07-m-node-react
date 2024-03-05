@@ -5,8 +5,8 @@ import { User, Event } from "../../db";
 const associateEvent = async (userId: number, eventId: number) => {
   try {
 
-    const user = await User.findByPk(userId);
-    const event = await Event.findByPk(eventId);
+    const user = await User.findByPk(userId) as any;
+    const event = await Event.findByPk(eventId) as any;
 
     if (!user || !event) {
       throw new Error("Usuario o evento no encontrado");
