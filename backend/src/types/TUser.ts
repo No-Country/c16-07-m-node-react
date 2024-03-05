@@ -6,6 +6,7 @@ export type TUser = {
     createdAt: Date;
     country?: string;
     email: string;
+    imageUrl: string;
     firstName: string;
     lastName: string;
     observations?: string;

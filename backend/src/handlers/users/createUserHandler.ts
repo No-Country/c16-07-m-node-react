@@ -1,5 +1,4 @@
 import createUser from "../../controllers/users/createUser";
-import { getUserWithoutPassword } from "../../Utils/helpers";
 import type { Request, Response, NextFunction } from "express";
 import type { TUser } from "../../types/TUser";
 
@@ -14,6 +13,7 @@ export default async function createUserHandler(
       aboutMe,
       birthdate,
       country,
+      imageUrl,
       email,
       firstName,
       lastName,
@@ -28,6 +28,7 @@ export default async function createUserHandler(
       aboutMe,
       birthdate,
       country,
+      imageUrl,
       email,
       firstName,
       lastName,
@@ -45,4 +46,23 @@ export default async function createUserHandler(
     console.error("Error al intentar registrar el usuario");
     next(error);
   }
+}
+
+function getUserWithoutPassword(user: TUser) {
+  return {
+    userId: user.id,
+    address: user.address,
+    aboutMe: user.aboutMe,
+    birthdate: user.birthdate,
+    createdAt: user.createdAt,
+    country: user.country,
+    email: user.email,
+    imageUrl: user.imageUrl,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    observations: user.observations,
+    postalCode: user.postalCode,
+    phone: user.phone,
+    updatedAt: user.updatedAt,
+  };
 }
