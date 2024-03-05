@@ -12,9 +12,6 @@ export default function initializeEventModel(sequelize: Sequelize) {
       locate: {
         type: DataTypes.STRING,
       },
-      category: {
-        type: DataTypes.INTEGER,
-      },
       name: {
         type: DataTypes.STRING,
       },
