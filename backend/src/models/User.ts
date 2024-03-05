@@ -27,6 +27,7 @@ export default function initializeUserModel(sequelize: Sequelize) {
       },
       imageUrl: {
         type: DataTypes.STRING,
+        defaultValue: "https://i.postimg.cc/GpxnNYFt/sinimagen.jpg",
       },
       email: {
         type: DataTypes.STRING,
