@@ -39,30 +39,9 @@ export default async function createUserHandler(
     } as TUser;
 
     const user = await createUser(userData) as any;
-    const userWithoutPassword = getUserWithoutPassword(user);
-    
-    return res.status(201).json(userWithoutPassword);
+    return res.status(201).json(user);
   } catch (error) {
     console.error("Error al intentar registrar el usuario");
     next(error);
   }
-}
-
-function getUserWithoutPassword(user: TUser) {
-  return {
-    userId: user.id,
-    address: user.address,
-    aboutMe: user.aboutMe,
-    birthdate: user.birthdate,
-    createdAt: user.createdAt,
-    country: user.country,
-    email: user.email,
-    imageUrl: user.imageUrl,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    observations: user.observations,
-    postalCode: user.postalCode,
-    phone: user.phone,
-    updatedAt: user.updatedAt,
-  };
 }
