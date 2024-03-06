@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { UserRegistrationContext } from "../context/UserRegistrationContext";
 import { loginRequest } from "../api/auth";
+
 interface IFormLogin {
     email: string; // Cambiado de username a email para reflejar el uso correcto
     password: string;
@@ -22,7 +23,7 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
 
     const onSubmit = async (data: IFormLogin) => {
         try {
-            // Asegúrate de que la estructura de data coincida con lo esperado por loginRequest
+            // Asegurarnos de que la estructura de data coincida con lo esperado por loginRequest
             const loginData = { email: data.email, password: data.password };
             const { token, user } = await loginRequest(loginData);
             localStorage.setItem('token', token);
