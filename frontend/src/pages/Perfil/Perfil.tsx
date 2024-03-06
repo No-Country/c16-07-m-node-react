@@ -1,5 +1,10 @@
 import React from "react";
 import Fondo from "./Fondo";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChartLine, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import logoMini from "../../../public/assets/image/logo_app_acompanar_mini.png"
+import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 
 const Perfil = () => {
   const intereses = [
@@ -30,22 +35,32 @@ const Perfil = () => {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <div className="card w-1/2 my-5 bg-base-100 shadow-xl border border-gray-300">
+      <div className="flex flex-col justify-center px-10 h-fit mb-24">
+        <div className="card my-5 bg-base-100 shadow-xl border border-gray-300 p-3 min-w-96 md:mx-20 xl:mx-40">
           <div className="mx-5 my-5 flex items-start">
             <div className="avatar">
-              <div className="w-24 rounded">
-                <img src="https://s3-alpha-sig.figma.com/img/f8cd/4dbe/b2691ea8f32bad02f902520ac0f6bca0?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VGocWK-qIwG4sQjl9Nny9qGOCWOS61h4~kSG--cVeZofLj~hSFStLQ8xiu4K8P6wwBnxEhKEdeNwMCAdPYh3d3RD~U2jlMMkNwCVrZvXr8-u2oFh2hSLq0u0V0g2QqBDISZ3-6TrQu7bH65i6TFog6PBzCCwHgAUzk~VrAnrnBGt9waFbbV~oB0udqve7n9IlIcox~0mE24RM6IEnXBSa7ZNuUH9tzrX1XRCVjExq4gTq0Faxyq8DkTSq80y8M5v9Q7LQQrnBoiezYR2eEBam3~w-0cEx3K7A0yqqpGjOyvkd7veLmWBDJBWQgeYl4AUymw~aTvqGkt2jC2lnXVvZg__" />
+              <div className="min-w-40 rounded">
+                <img src="https://s3-alpha-sig.figma.com/img/f8cd/4dbe/b2691ea8f32bad02f902520ac0f6bca0?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VGocWK-qIwG4sQjl9Nny9qGOCWOS61h4~kSG--cVeZofLj~hSFStLQ8xiu4K8P6wwBnxEhKEdeNwMCAdPYh3d3RD~U2jlMMkNwCVrZvXr8-u2oFh2hSLq0u0V0g2QqBDISZ3-6TrQu7bH65i6TFog6PBzCCwHgAUzk~VrAnrnBGt9waFbbV~oB0udqve7n9IlIcox~0mE24RM6IEnXBSa7ZNuUH9tzrX1XRCVjExq4gTq0Faxyq8DkTSq80y8M5v9Q7LQQrnBoiezYR2eEBam3~w-0cEx3K7A0yqqpGjOyvkd7veLmWBDJBWQgeYl4AUymw~aTvqGkt2jC2lnXVvZg__" />            
+              </div>
+            </div>
+            <div className="flex flex-col  w-full">
+              <Link to="/Login" className="btn ms-auto bg-amber-500 text-lg font-normal hover:bg-amber-400 active:bg-amber-300"><FontAwesomeIcon icon={faPenToSquare} /> Editar</Link>
+              <div className="ps-6">
+                <p className="font-semibold text-xl">Julio Alberto Duarte</p>
+                <p className="text-gray-600">Jubilado</p>
+                <p className="text-gray-600">78 años</p>
+                <p className="text-gray-600">Embalse, Córdoba, Argentina</p>
+                <p className="text-sky-700 font-bold">Quiero estar acompañado</p>
               </div>
             </div>
           </div>
-          <div className="card-body">
+          <div className="card-body border-t-2 border-amber-300">
             <h2 className="text-dark font-inter font-medium text-xl leading-[35.659px] card-title">
-              Sobre mi
+              Sobre mí
             </h2>
             <p className="text-primary-text font-inter font-normal text-lg leading-[32.687px]">
               Me considero una persona sociable y con mucha energía disponible,
-              soy viudo desde hace 3 años tengo 2 hijos y 3 nietos. Amigable,
+              soy viudo desde hace 3 años, tengo 2 hijos y 3 nietos. Amigable,
               jovial y de buen gusto.
             </p>
             <h2 className="text-dark font-inter font-medium text-xl leading-[35.659px]">
@@ -53,12 +68,69 @@ const Perfil = () => {
             </h2>
             <div className="card-actions justify-center">
               {intereses.map((intereses, index) => (
-                <div key={index} className="badge badge-primary">
+                <div key={index} className="badge font-semibold bg-sky-500">
                   {intereses}
                 </div>
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="flex w-full justify-evenly">
+
+          <div className="text-center card my-5 bg-base-100 shadow-xl border border-gray-300 p-6">
+            <div className="flex">
+              <div className="m-auto md:m-0">
+                <img src={logoMini} alt="logo" className="w-12 md:me-4" />
+              </div>
+              <div className="hidden md:inline">
+                <p className="text-xl font-semibold">Conexiones</p>
+                <p className="text-gray-600">Último mes</p>              
+              </div>
+            </div>
+            <p className="text-2xl my-4 font-bold">19/20</p>
+            <progress className="hidden md:flex progress progress-primary w-56" value="19" max="20"></progress>
+            <div className="md:hidden md:flex">
+              <p className="md:hidden text-lg font-semibold">Conexiones</p>
+              <p className="md:hidden text-gray-600">Último mes</p>              
+            </div>
+          </div>          
+
+          <div className="text-center card my-5 bg-base-100 shadow-xl border border-gray-300 p-6">
+            <div className="flex">
+              <div className="m-auto md:m-0">
+                <FontAwesomeIcon icon={faChartLine} className="text-5xl text-sky-500 md:me-4" />
+              </div>
+              <div className="hidden md:inline">
+                <p className="text-lg font-semibold">Progreso</p>
+                <p className="text-gray-600">Actividades</p>              
+              </div>
+            </div>
+            <p className="text-2xl my-4 font-bold">38/100</p>
+            <progress className="hidden md:flex progress progress-info w-56" value="38" max="100"></progress>
+            <div className="md:hidden md:flex">
+              <p className="md:hidden text-lg font-semibold">Progreso</p>
+              <p className="md:hidden text-gray-600">Actividades</p>              
+            </div>
+          </div>   
+          
+          <div className="text-center card my-5 bg-base-100 shadow-xl border border-gray-300 p-6">
+            <div className="flex">
+              <div className="m-auto md:m-0">
+                <FontAwesomeIcon icon={faStar} className="text-5xl text-amber-500  md:me-4" />
+              </div>
+              <div className="hidden md:inline">
+                <p className="text-lg font-semibold">Logros obtenidos</p>
+                <p className="text-gray-600">Esta semana</p>              
+              </div>
+            </div>
+            <p className="text-2xl my-4 font-bold">25/40</p>
+            <progress className="hidden md:flex progress progress-warning w-56" value="25" max="40"></progress>
+            <div className="md:hidden md:flex">
+              <p className="md:hidden text-lg font-semibold">Logros</p>
+              <p className="md:hidden text-gray-600">Esta semana</p>              
+            </div>
+          </div>          
         </div>
       </div>
     </>
