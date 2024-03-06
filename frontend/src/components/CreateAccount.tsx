@@ -52,18 +52,23 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
   };
 
   return (
-    <section className="w-full max-w-xl mx-auto p-8 bg-white rounded-lg shadow-md">
+    <section className="w-full max-w-xl mx-auto  bg-white rounded-lg   ">
       {alert.show && (
         <div className="fixed inset-0 flex items-center justify-center z-10">
-          <div className="bg-sky-200 font-semibold text-black text-center p-4 rounded-lg shadow-lg max-w-sm">
+          <div className="bg-sky-200 font-semibold text-black text-center p-4 rounded-lg  max-w-sm">
             {alert.message}
           </div>
         </div>
       )}
-
-      <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-        Crear Cuenta
-      </h1>
+      
+<div className= "gap-2 p-12 " >
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 ">
+        Crea Cuenta
+      </h2>
+      <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
+  
+   </div>
+      
       <form onSubmit={handleSubmit(handleCreateAccount)} className="space-y-6">
         <div>
           <label
@@ -270,13 +275,23 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
 
         <div className="flex justify-center">
           <button
+            type="button"
+            onClick={handleChange}
+            className="px-6 py-3 my-3 mx-3 bg-amber-500 text-white font-semibold rounded-md hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-opacity-50"
+          >
+            Iniciar Sesión
+          </button>
+          <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+            className="px-6 py-3 my-3 bg-sky-500 text-white font-semibold rounded-md hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-600 focus:ring-opacity-50"
           >
             Crear Cuenta
           </button>
+          
         </div>
+        
       </form>
+     
     </section>
   );
 };

@@ -40,8 +40,8 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
 
     return (
         <div className="w-full flex flex-col gap-4 p-5">
-            <p className="font-bold">Inicia Sesión</p>
-            <p className="text-center text-2xl font-bold text-primary">Acompañar +</p>
+            <h2 className="font-bold text-2xl text-center">Inicia Sesión</h2>
+            <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
                 <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -76,7 +76,7 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
                     </div>
                 </div>
                 <div className="w-full flex justify-center">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn text-white bg-sky-500 hover:bg-sky-700">
                         Iniciar Sesión
                     </button>
                 </div>
@@ -84,18 +84,18 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
             <div className="w-full flex flex-col items-center gap-5">
                 <div className="divider">O conéctate con</div>
                 <div className="flex justify-center gap-5">
-                    <button className="btn btn-outline btn-primary">
+                    <button className="btn text-sky-500 border-sky-500 hover:bg-sky-700 btn-outline ">
                         <FontAwesomeIcon icon={faFacebook} />
                         Facebook
                     </button>
-                    <button className="btn btn-outline btn-primary">
+                    <button className="btn text-sky-500 border-sky-500 hover:bg-sky-700 btn-outline ">
                         <FontAwesomeIcon icon={faGoogle} />
                         Google
                     </button>
                 </div>
                 <p>¿No tienes cuenta?</p>
                 <button
-                    className="btn btn-secondary btn-link w-min whitespace-nowrap"
+                    className="btn text-sky-500 btn-link w-min whitespace-nowrap"
                     onClick={handleChange}>
                     Crear cuenta
                 </button>

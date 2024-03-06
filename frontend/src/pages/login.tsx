@@ -2,6 +2,8 @@ import { useState } from "react";
 import { LoginUser } from "../components/LoginUser";
 import { CreateAccount } from "../components/CreateAccount";
 import LoginImg from "../../public/assets/image/login.jpg";
+import fondoManos from '../../public/assets/image/fondomanos.png';
+
 
 
 export default function Login() {
@@ -12,7 +14,7 @@ export default function Login() {
   return (
     <div className="w-full flex flex-row gap-3">
       <div className="w-full flex flex-col items-center">
-        <img src={LoginImg} width="380" />
+        <img src={newUser ? LoginImg : fondoManos} width="60%" />
       </div>
       <div className="w-full flex flex-col items-start">
         {newUser ?
