@@ -9,51 +9,26 @@ export default function Navbar() {
 
   return (      
     <>
-      {/* <nav className="flex justify-between bg-white font-semibold border-b-2 border-sky-500 text-lg sticky top-0 z-10 md:hidden">
-        <ul className="m-4 ">  
-          <li className="">
-            <Link to="/">
-              <img src={logoMini} alt="logo" className="w-10" />
-            </Link>         
-          </li>              
-        </ul>
-        <ul className="flex">            
-          <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Ayuda' ? 'text-amber-500' : 'text-sky-900'}`}>
-            <Link to="/Ayuda" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faQuestionCircle} className="text-3xl" />Ayuda</Link>
-          </li>
-          <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
-            <Link to="/Login" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faCircleUser} className="text-3xl" />Mi Perfil</Link>
-          </li>            
-        </ul>
-      </nav> */}
+      <nav className="flex justify-between bg-white font-semibold text-lg sticky top-0 z-10 md:hidden">
+          <ul className="m-4 ">  
+            <li className="">
+              <Link to="/">
+                <img src={logoMini} alt="logo" className="w-10" />
+              </Link>         
+            </li>              
+          </ul>
+          <ul className="flex">            
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Ayuda' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Ayuda" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faQuestionCircle} className="text-3xl" />Ayuda</Link>
+            </li>
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Login" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faCircleUser} className="text-3xl" />Ingresar</Link>
+            </li>            
+          </ul>
+        </nav>
 
-      {/* Navbar landing page */}
-      <nav className="flex justify-between bg-white font-semibold border-b-2 border-sky-500 text-lg sticky top-0 z-10">
-        <ul className="m-4">  
-          <li className="md:hidden">
-            <Link to="/" className="">
-              <img src={logoMini} alt="logo" className="w-10 min-w-6" />
-            </Link>         
-          </li>              
-          <li className="hidden md:flex">
-            <Link to="/">
-              <img src={logo} alt="logo" className="w-36" />
-            </Link>         
-          </li>              
-        </ul>
-        <ul className="flex">            
-          <li className={`flex flex-col justify-center w-32 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
-            <Link to="/Login" className="hover:text-amber-500 flex flex-col items-center md:btn md:bg-sky-700 md:hover:bg-sky-500 md:active:bg-sky-900 md:hover:text-white md:text-white"><FontAwesomeIcon icon={faUserPlus} className="text-3xl md:hidden" />Registrarse</Link>
-            
-          </li>
-          <li className={`flex flex-col justify-center w-32 md:mx-10 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
-            <Link to="/Login" className="hover:text-amber-500 flex flex-col items-center md:btn md:bg-amber-500 md:hover:bg-amber-400 md:active:bg-amber-300 md:hover:text-sky-900"><FontAwesomeIcon icon={faCircleUser} className="text-3xl md:hidden" />Iniciar sesión</Link>
-          </li>            
-        </ul>
-      </nav>
-
-      {/* <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900 
-                      md:static md:h-fit md:left-0 md:transform-none md:bg-white md:p-4 md:border-b-2 md:border-sky-500">        
+      <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900 
+                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-white md:p-4">        
         <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100  md:text-sky-800 md:justify-between">
           <ul className="space-x-4 hidden md:flex">  
             <li className="">
@@ -87,7 +62,7 @@ export default function Navbar() {
             </li>            
           </ul>
         </nav>
-      </div> */}
+      </div> 
     </>
   );
 }

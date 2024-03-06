@@ -1,4 +1,6 @@
+
 import express from 'express';
+import cors from 'cors';
 import morgan from 'morgan';
 import router from './routes/index';
 import { errorHandler, wrapError } from './middlewares/errorHandler';
@@ -11,13 +13,14 @@ const server = express();
 
 server.use(morgan('dev')); // registra las solicitudes HTTP en modo de desarrollo
 server.use(express.json());//Analiza el cuerpo de las solicitudes JSON
-server.use((req, res, next) => { //manejo de CORS al agregar las cabeceras necesarias a la respuesta, esto permite al servidor aceptar peticiones de un origen diferente
-    res.header('Access-Control-Allow-Origin', '*');// permite que cualquier dominio acceda al servidor
-    res.header('Access-Control-Allow-Credentials', 'true');//permite que las solicitudes se hagan con credenciales
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');//permite los encabezados
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');// dice cuáles métodos son permitidos
-    next();
-});
+const corsOptions = {
+    origin: 'http://localhost:5173', // Reemplaza con nuestro origen específico
+    credentials: true, // Configuración para permitir credenciales
+    methods: 'GET, POST, OPTIONS, PUT, DELETE', // Métodos permitidos
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept' // Encabezados permitidos
+  };
+  
+  server.use(cors(corsOptions));
 
 passport.use(localStrategy);
 server.use(passport.initialize());// Es un middleware de autenticación para node.js

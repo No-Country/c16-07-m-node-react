@@ -1,20 +1,28 @@
 import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons/faGoogle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { set, useForm } from "react-hook-form";
 import CompleteAccount from "./CompleteAccount";
 import { RenderIf } from "./RenderIf";
 import DatosSegundoNivel from "./DatosSegundoNivel";
 import DatosExtras from "./DatosExtras";
 import axios from "axios";
+import { UserRegistrationContext } from "../context/UserRegistrationContext";
 
-interface ICreateAccount {
-  username: string;
+interface CreateAccountFormData {
+  address: string;
+  aboutMe: string;
+  birthdate: string;
+  country: string;
   email: string;
+  firstName: string;
+  lastName: string;
+  observations: string;
   password: string;
+  phone: string;
+  postalCode: string;
 }
-
 interface IProps {
   newUser: boolean;
   setNewUser: (value: boolean) => void;
@@ -29,9 +37,10 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<ICreateAccount>();
+  } = useForm<CreateAccountFormData>();
+  const { setUserData } = useContext(UserRegistrationContext);
 
-  const handleCreateAccount = async (data: ICreateAccount) => {
+  const handleCreateAccount = async (data: CreateAccountFormData) => {
     console.log(data);
     try {
       const response = await axios.post(
@@ -43,7 +52,6 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
       console.log("error al crear usuario", error);
     }
   };
-
   const handleChange = () => {
     setNewUser(!newUser);
   };
@@ -82,13 +90,6 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
             onSubmit={handleSubmit(handleCreateAccount)}
             className="flex flex-col gap-3"
           >
-            <input
-              type="text"
-              placeholder="Nombre de usuario"
-              className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              {...register("username")}
-            />
-            {errors.username && <span>Usuario es requerido</span>}
             <input
               type="text"
               placeholder="Correo"
@@ -166,3 +167,5 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     </div>
   );
 };
+
+export default CreateAccount;

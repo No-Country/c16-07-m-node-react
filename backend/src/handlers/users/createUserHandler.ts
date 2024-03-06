@@ -8,7 +8,7 @@ export default async function createUserHandler(
   res: Response,
   next: NextFunction
 ) {
-  try {
+  try { 
     const {
       address,
       aboutMe,
