@@ -23,6 +23,7 @@ export default async function updateUser(
   user.observations = userData.observations;
   user.phone = userData.phone;
   user.postalCode = userData.postalCode;
+  user.imageUrl = userData.imageUrl;
 
   if (userData.password) {
     userData.password = await bcrypt.hash(userData.password, 10);
