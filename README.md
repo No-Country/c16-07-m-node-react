@@ -29,6 +29,15 @@ Adaptando el punto 3 de los Objetivos de Desarrollo Sostenible (ODS) para "Acomp
 Garantizar una vida saludable y promover el bienestar para todos en todas las edades, incluida la promoción del bienestar emocional y físico de los adultos mayores a través de actividades sociales y de cuidado personalizado.
 
 <h1 align="center"> 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjB1bXJoOGV0cmVkanN2Zm9neWdtbnV6M2lsdXVwNjZsMTd1YWVlcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wHnpiq4cxVVKnI5KYf/giphy.gif" width="60px">Documentación
+</h1>
+
+<a href="https://www.figma.com/file/Fmz8nOyIDyHWHiLfNsiO0d/No-Country?type=whiteboard&node-id=338-561&t=tXx3spMHPtglHmIS-4"><img src="https://img.shields.io/badge/Ver%20Figjam-0EA5E9?style=for-the-badge&logo=figma&logoColor=000000"/></a>
+<a href="https://www.figma.com/file/poFZt7jHJFRmySqBBL9XAb/No-Country-APP?type=design&node-id=0%3A1&mode=design&t=fQ56LUytrHoErPIq-1" target="_blank"><img  src="https://img.shields.io/badge/Ver%20Figma-F59E0B?style=for-the-badge&logo=figma&logoColor=000000"/></a>
+<a href="https://acompanar.vercel.app/" target="_blank"><img  src="https://img.shields.io/badge/VER_API_ACOMPA%C3%91AR-0369A1?style=for-the-badge&logo=Vercel&logoColor=black"/></a>
+
+
+<h1 align="center"> 
 <img src="https://media0.giphy.com/media/uhQuegHFqkVYuFMXMQ/giphy.gif" width="60px">Tecnologias Usadas
 </h1>
 
