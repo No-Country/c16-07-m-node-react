@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import logo from "../../public/assets/image/logo_app_acompanar.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faXTwitter, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+   faFacebook,
+   faXTwitter,
+   faYoutube,
+   faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
 
 export default function Navbar() {  
   return (  
@@ -51,3 +57,4 @@ export default function Navbar() {
     </footer>
   )
 }
+

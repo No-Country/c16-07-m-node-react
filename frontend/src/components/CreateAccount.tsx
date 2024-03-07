@@ -1,3 +1,4 @@
+
 import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons/faGoogle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,7 @@ import DatosSegundoNivel from "./DatosSegundoNivel";
 import DatosExtras from "./DatosExtras";
 import axios from "axios";
 import { UserRegistrationContext } from "../context/UserRegistrationContext";
+
 
 interface CreateAccountFormData {
   address: string;
@@ -38,7 +40,8 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
-  const { setUserData } = useContext(UserRegistrationContext);
+  const navigate = useNavigate();
+
 
   const handleCreateAccount = async (data: CreateAccountFormData) => {
     console.log(data);
@@ -52,9 +55,15 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
       console.log("error al crear usuario", error);
     }
   };
+
   const handleChange = () => {
     setNewUser(!newUser);
   };
+  const onSubmit = (data: CreateAccountFormData) => {
+    signup(data, handleChange);
+  };
+  
+
 
   const nextStep = () => {
     if (step < 4) {
@@ -67,6 +76,7 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
       setStep(step - 1);
     }
   };
+
 
   return (
     <div className="w-full flex flex-col gap-4 p-5">
@@ -89,6 +99,7 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
           <form
             onSubmit={handleSubmit(handleCreateAccount)}
             className="flex flex-col gap-3"
+
           >
             <input
               type="text"
@@ -159,12 +170,14 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
           <button className="btn bg-amber-400" onClick={nextStep}>
             Siguiente
           </button>
+
         </RenderIf>
         <RenderIf condition={step === 3}>
           <button className="btn bg-amber-400">Finalizar</button>
         </RenderIf>
       </div>
     </div>
+
   );
 };
 

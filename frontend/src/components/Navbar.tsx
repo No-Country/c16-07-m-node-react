@@ -2,30 +2,165 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../public/assets/image/logo_app_acompanar.png";
 import logoMini from "../../public/assets/image/logo_app_acompanar_mini.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { faHome, faPuzzlePiece, faPeopleGroup, faCircleUser, faQuestionCircle, faCalendar, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar() {
-  const location = useLocation();
 
-  return (      
-    <>
-      <nav className="flex justify-between bg-white font-semibold text-lg sticky top-0 z-10 md:hidden">
-          <ul className="m-4 ">  
-            <li className="">
-              <Link to="/">
-                <img src={logoMini} alt="logo" className="w-10" />
-              </Link>         
-            </li>              
-          </ul>
-          <ul className="flex">            
-            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Ayuda' ? 'text-amber-500' : 'text-sky-900'}`}>
-              <Link to="/Ayuda" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faQuestionCircle} className="text-3xl" />Ayuda</Link>
-            </li>
-            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
-              <Link to="/Login" className="hover:text-amber-500 flex flex-col items-center"><FontAwesomeIcon icon={faCircleUser} className="text-3xl" />Ingresar</Link>
-            </li>            
-          </ul>
-        </nav>
+export default function Navbar() {
+   const { isAuthenticated, logout } = useAuth();
+   const location = useLocation();
+
+   return (
+      <>
+         <nav className="flex justify-between items-center bg-white font-semibold text-lg sticky top-0 z-10 md:hidden">
+            <ul className="m-4">
+               <li>
+                  <Link to="/Landing">
+                     <img src={logoMini} alt="logo" className="w-10" />
+                  </Link>
+               </li>
+            </ul>
+            <ul
+               className={`flex-grow items-center justify-center mx-4 ${
+                  isAuthenticated ? "hidden" : "flex"
+               }`}
+            >
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/" className="flex flex-col items-center">
+                     <FontAwesomeIcon icon={faHome} className="text-3xl" />
+                     Inicio
+                  </Link>
+               </li>
+            </ul>
+            <ul
+               className={`flex-grow items-center justify-end mx-4 space-x-4 ${
+                  isAuthenticated ? "hidden" : "flex"
+               }`}
+            >
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/Ayuda"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/Ayuda" className="flex flex-col items-center">
+                     <FontAwesomeIcon
+                        icon={faQuestionCircle}
+                        className="text-3xl"
+                     />
+                     Ayuda
+                  </Link>
+               </li>
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/Login"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/Login" className="flex flex-col items-center">
+                     <FontAwesomeIcon
+                        icon={faCircleUser}
+                        className="text-3xl"
+                     />
+                     Ingresar
+                  </Link>
+               </li>
+            </ul>
+            <ul
+               className={`flex-grow items-center justify-center mx-4 space-x-4 ${
+                  isAuthenticated ? "flex" : "hidden"
+               }`}
+            >
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/Home"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/Home" className="flex flex-col items-center">
+                     <FontAwesomeIcon icon={faHome} className="text-3xl" />
+                     Tu espacio
+                  </Link>
+               </li>
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/Eventos"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/Eventos" className="flex flex-col items-center">
+                     <FontAwesomeIcon icon={faCalendar} className="text-3xl" />
+                     Eventos
+                  </Link>
+               </li>
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/Ejercicios"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/Ejercicios" className="flex flex-col items-center">
+                     <FontAwesomeIcon
+                        icon={faPuzzlePiece}
+                        className="text-3xl"
+                     />
+                     Ejercicios
+                  </Link>
+               </li>
+            </ul>
+            <ul
+               className={`flex-grow items-center justify-end mx-4 space-x-4 ${
+                  isAuthenticated ? "flex" : "hidden"
+               }`}
+            >
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/Perfil"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link to="/Perfil" className="flex flex-col items-center">
+                     <FontAwesomeIcon
+                        icon={faPeopleGroup}
+                        className="text-3xl"
+                     />
+                     Perfil
+                  </Link>
+               </li>
+               <li
+                  className={`flex justify-center ${
+                     location.pathname === "/"
+                        ? "text-amber-500"
+                        : "text-sky-900"
+                  }`}
+               >
+                  <Link
+                     to="/"
+                     onClick={logout}
+                     className="flex flex-col items-center"
+                  >
+                     <FontAwesomeIcon
+                        icon={faRightFromBracket}
+                        className="text-3xl"
+                     />
+                     Logout
+                  </Link>
+               </li>
+            </ul>
+         </nav>
+
 
       <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900 
                       md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-white md:p-4">        
@@ -65,4 +200,5 @@ export default function Navbar() {
       </div> 
     </>
   );
+
 }

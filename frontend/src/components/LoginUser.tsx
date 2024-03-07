@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { UserRegistrationContext } from "../context/UserRegistrationContext";
-import { loginRequest } from "../api/auth";
+import { useNavigate } from "react-router-dom";
+
+import {useAuth,} from "../context/Auth.context";
+
+
 interface IFormLogin {
     email: string; // Cambiado de username a email para reflejar el uso correcto
     password: string;
@@ -16,31 +19,31 @@ interface IProps {
 }
 
 export const LoginUser = ({ newUser, setNewUser }: IProps) => {
+
     const { register, handleSubmit, formState: { errors } } = useForm<IFormLogin>();
-    const { setUserData } = useContext(UserRegistrationContext);
     const navigate = useNavigate();
-
-    const onSubmit = async (data: IFormLogin) => {
-        try {
-            // Asegúrate de que la estructura de data coincida con lo esperado por loginRequest
-            const loginData = { email: data.email, password: data.password };
-            const { token, user } = await loginRequest(loginData);
-            localStorage.setItem('token', token);
-            setUserData(user);
-            navigate('/');
-        } catch (error) {
-            console.error('Error al iniciar sesión', error);
+    const { signin,isAuthenticated  } =useAuth();
+   
+    
+    const onSubmit = (data: IFormLogin) => {
+        signin(data.email, data.password);
+      };
+      
+    
+    
+    useEffect(() => {
+        if (isAuthenticated) {
+          navigate('/home');
         }
-    };
-
-    const handleChange = () => {
+      }, [isAuthenticated, navigate]);
+      
+      const handleChange = () => {
         setNewUser(!newUser);
     };
-
     return (
         <div className="w-full flex flex-col gap-4 p-5">
-            <p className="font-bold">Inicia Sesión</p>
-            <p className="text-center text-2xl font-bold text-primary">Acompañar +</p>
+            <h2 className="font-bold text-2xl text-center">Inicia Sesión</h2>
+            <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
                 <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -75,7 +78,7 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
                     </div>
                 </div>
                 <div className="w-full flex justify-center">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn text-white bg-sky-500 hover:bg-sky-700">
                         Iniciar Sesión
                     </button>
                 </div>
@@ -83,18 +86,18 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
             <div className="w-full flex flex-col items-center gap-5">
                 <div className="divider">O conéctate con</div>
                 <div className="flex justify-center gap-5">
-                    <button className="btn btn-outline btn-primary">
+                    <button className="btn text-sky-500 border-sky-500 hover:bg-sky-700 btn-outline ">
                         <FontAwesomeIcon icon={faFacebook} />
                         Facebook
                     </button>
-                    <button className="btn btn-outline btn-primary">
+                    <button className="btn text-sky-500 border-sky-500 hover:bg-sky-700 btn-outline ">
                         <FontAwesomeIcon icon={faGoogle} />
                         Google
                     </button>
                 </div>
                 <p>¿No tienes cuenta?</p>
                 <button
-                    className="btn btn-secondary btn-link w-min whitespace-nowrap"
+                    className="btn text-sky-500 btn-link w-min whitespace-nowrap"
                     onClick={handleChange}>
                     Crear cuenta
                 </button>
