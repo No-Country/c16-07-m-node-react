@@ -341,6 +341,7 @@ Andrés es un joven inquieto que siempre busca la manera de estar vinculado con 
 <img src="img/iPhone 15 Pro.png"/>
 <img src="img/iPhone 15 Pro2.png"/>
 </div>
+
 ## Contribución
 
 ¡Si deseas contribuir a este proyecto, sigue estos pasos!
