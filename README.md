@@ -1,6 +1,6 @@
 
-![Github Contributors](https://img.shields.io/github/contributors/No-Country/c16-07-m-node-react)
-![Github Stars](https://img.shields.io/github/stars/No-Country/c16-07-m-node-react)
+![Github Contributors](https://github.com/No-Country/c16-07-m-node-react)
+![Github Stars](https://github.com/No-Country/c16-07-m-node-react)
 
 
 # c16-07-m-node-react
