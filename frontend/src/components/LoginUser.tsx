@@ -33,7 +33,7 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
     
     useEffect(() => {
         if (isAuthenticated) {
-          navigate('/');
+          navigate('/home');
         }
       }, [isAuthenticated, navigate]);
       
