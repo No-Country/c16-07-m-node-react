@@ -250,7 +250,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
           <h4 style="margin-top: 1rem;">Frontend Developer</h4>
         </a>
         <a href="https://github.com/Eliazar08" target="_blank">
-          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
+          <img src="https://media.licdn.com/dms/image/D4D03AQHIrvUF-ETfEQ/profile-displayphoto-shrink_200_200/0/1677593582617?e=1715212800&v=beta&t=kHaifHDUYPyq-AqLtRCiG7eI6Mg49q8yd0rZb9b-NgA"/>
         </a>
         <a href="https://www.linkedin.com/in/eliazar-alberto-suarez-7b2432193/" target="_blank">
           <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
