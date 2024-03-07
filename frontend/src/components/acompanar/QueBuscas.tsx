@@ -1,10 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function QueBuscas() {
    const backgroundImage =
       "https://s3-alpha-sig.figma.com/img/7153/708b/f4cd967b3cc850dfe9309251844f682a?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JbhwuU8UfPieV8x58wpMtS8M4iz77DvjYHR-XXEBKLrzb2LKbu3Mfuq3BFYFQ6hH30PHeCdu7XzRC60Q7waYduCJYd~iqtRJyRnF9f-USkwQR-yzfxhQCL7ufm2zJxOpu7I0huCvqyoc3EN44LQ7OcqRVftaF5oyr1y7E5p41Tvr41-cV6AgKBtX5lwbqinbV2gVsfBBrNA6xKsM5iqn4zKft4-jDJR-CWcp4fYwIC1dHDhJ-p2KGRg93G7qt4R27C1PZfsf64LagsQLdxeZjtZDiSVRCzvXZ4u8HSq2cSlS~s8EDAbcjevsUR4x4yTpY64c5jKUw4BRTz3bQAWA8g__";
    return (
       <>
+         <div className="text-sm breadcrumbs bg-[#0369A1] text-white rounded-md">
+            <ul>
+               <li>
+                  <a>Acompañar</a>
+               </li>
+            </ul>
+         </div>
+
          <div className=" relative mt-16  mr-20 ml-20 lg:mt-6">
             <div className="flex">
                <div className="w-1/2 ">
@@ -27,12 +36,16 @@ export default function QueBuscas() {
                            significativos en compañía.
                         </p>
                         <div className="flex flex-col space-y-4">
-                           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                              ¡Haz clic aquí!
-                           </button>
-                           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                              ¡Otro botón!
-                           </button>
+                           <Link to="/acompanar-adulto">
+                              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                 Quiero acompañar a un adulto mayor
+                              </button>
+                           </Link>
+                           <Link to="/adulto-acompanado">
+                              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                 Quiero estar acompañado
+                              </button>
+                           </Link>
                         </div>
                      </div>
                   </div>

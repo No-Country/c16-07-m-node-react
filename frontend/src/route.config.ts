@@ -6,6 +6,7 @@ import Ayuda from "./pages/Ayuda";
 import Inicio from "./pages/Inicio";
 import Acompañar from "./pages/Acompañar";
 import AcompanarAdulto from "./components/acompanar/AcompanarAdulto";
+import AdultoAcompanado from "./components/acompanar/AdultoAcompanado";
 
 const rutas = [
    { path: "/oldMen/mostrar", element: MostrarOldman },
@@ -16,5 +17,6 @@ const rutas = [
    { path: "/Inicio", element: Inicio },
    { path: "/Acompanar", element: Acompañar },
    { path: "/acompanar-adulto", element: AcompanarAdulto },
+   { path: "/adulto-acompanado", element: AdultoAcompanado },
 ];
 export default rutas;
