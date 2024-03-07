@@ -1,3 +1,14 @@
+<br />
+
+<div align="center">
+
+![Github Contributors](https://img.shields.io/github/contributors/No-Country/c16-07-m-node-react)
+![Github Stars](https://img.shields.io/github/stars/No-Country/c16-07-m-node-react)
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+
 # c16-07-m-node-react
 Proyecto para simulacion No Country
 
@@ -325,6 +336,16 @@ Andrés es un joven inquieto que siempre busca la manera de estar vinculado con 
   </tr>
 </table>
 
+
+<!-- Screenshots -->
+<h1 align="center"> 
+<img src="https://media1.giphy.com/media/xcFJX6T9z2iqiB9Ud9/giphy.gif" width="60px">Mockups
+</h1>
+
+<img src="img/MacBook Pro 162.png"/>
+<img src="img/MacBook Pro 16.png"/>
+<img src="img/iPhone 15 Pro.png"/>
+<img src="img/iPhone 15 Pro2.png"/>
 
 ## Contribución
 
