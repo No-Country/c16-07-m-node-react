@@ -2,16 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../public/assets/image/logo_app_acompanar.png";
 import logoMini from "../../public/assets/image/logo_app_acompanar_mini.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useAuth } from "../context/Auth.context";
-import {
-   faHome,
-   faPuzzlePiece,
-   faPeopleGroup,
-   faCircleUser,
-   faQuestionCircle,
-   faCalendar,
-   faRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons";
+
+import { faHome, faPuzzlePiece, faPeopleGroup, faCircleUser, faQuestionCircle, faCalendar, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Navbar() {
    const { isAuthenticated, logout } = useAuth();
@@ -168,116 +161,44 @@ export default function Navbar() {
             </ul>
          </nav>
 
-         <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900 md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-white md:p-4">
-            <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100 md:text-sky-800 md:justify-between">
-               <ul className="hidden md:flex md:flex-1 justify-center">
-                  <li>
-                     <Link to="/">
-                        <img src={logo} alt="logo" className="w-36" />
-                     </Link>
-                  </li>
-               </ul>
-               <ul className="flex flex-1 justify-around md:justify-center space-x-4">
-                  {!isAuthenticated && (
-                     <Link
-                        to="/"
-                        className={`py-3 flex flex-col justify-center ${
-                           location.pathname === "/"
-                              ? "text-amber-500"
-                              : "text-sky-900"
-                        }`}
-                     >
-                        Inicio
-                     </Link>
-                  )}
-                  {isAuthenticated && (
-                     <>
-                        <Link
-                           to="/Home"
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/Home"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Tu espacio
-                        </Link>
-                        <Link
-                           to="/Eventos"
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/Eventos"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Eventos
-                        </Link>
-                        <Link
-                           to="/Ejercicios"
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/Ejercicios"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Ejercicios
-                        </Link>
-                     </>
-                  )}
-               </ul>
-               <ul className="hidden md:flex md:flex-1 justify-end space-x-4">
-                  {!isAuthenticated && (
-                     <>
-                        <Link
-                           to="/Ayuda"
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/Ayuda"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Ayuda
-                        </Link>
-                        <Link
-                           to="/Login"
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/Login"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Ingresar
-                        </Link>
-                     </>
-                  )}
-                  {isAuthenticated && (
-                     <>
-                        <Link
-                           to="/Perfil"
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/Perfil"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Perfil
-                        </Link>
-                        <Link
-                           to="/"
-                           onClick={logout}
-                           className={`py-3 flex flex-col justify-center ${
-                              location.pathname === "/"
-                                 ? "text-amber-500"
-                                 : "text-sky-900"
-                           }`}
-                        >
-                           Logout
-                        </Link>
-                     </>
-                  )}
-               </ul>
-            </nav>
-         </div>
-      </>
-   );
+
+      <div className="fixed bottom-0 w-full h-fit z-10 bg-sky-900 
+                      md:static md:h-fit md:left-0 md:transform-none md:rounded-none md:bg-white md:p-4">        
+        <nav className="w-full flex flex-wrap items-center font-bold text-lg text-gray-100  md:text-sky-800 md:justify-between">
+          <ul className="space-x-4 hidden md:flex">  
+            <li className="">
+              <Link to="/">
+                <img src={logo} alt="logo" className="w-36" />
+              </Link>         
+            </li>              
+          </ul>
+
+          <ul className="flex justify-around w-full md:w-auto md:space-x-4">            
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}> 
+              <Link to="/" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faHome} className="p-1 md:hidden text-2xl" />Inicio</Link>
+            </li>
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/Acompa%C3%B1ar' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}>
+              <Link to="/Acompañar" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faPeopleGroup} className="p-1 md:hidden text-2xl" />Acompañar</Link>
+            </li>
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/Eventos' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}>
+              <Link to="/Eventos" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faCalendar} className="p-1 md:hidden text-2xl" />Eventos</Link>
+            </li>
+            <li className={`py-3 flex flex-col justify-center border-t-4 ${location.pathname === '/Ejercicios' ? 'border-amber-500 text-amber-500' : 'border-sky-900'} active:border-amber-500 md:border-0`}>
+              <Link to="/Ejercicios" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faPuzzlePiece} className="p-1 md:hidden text-2xl" />Ejercicios</Link>
+            </li>
+          </ul>
+
+          <ul className="flex space-x-4 hidden md:flex">
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Ayuda' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Ayuda" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center"><FontAwesomeIcon icon={faQuestionCircle} className="p-1 md:hidden" />Ayuda</Link>
+            </li>
+            <li className={`flex flex-col justify-center w-20 ${location.pathname === '/Login' ? 'text-amber-500' : 'text-sky-900'}`}>
+              <Link to="/Login" className="hover:text-amber-500 md:hover:text-sky-500 md:active:text-blue-900 flex flex-col items-center "><FontAwesomeIcon icon={faCircleUser} className="p-1 md:hidden" />Mi Perfil</Link>
+            </li>            
+          </ul>
+        </nav>
+      </div> 
+    </>
+  );
+
 }
