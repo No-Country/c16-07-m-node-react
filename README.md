@@ -140,7 +140,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
         </a>
         <a href="https://github.com/aracely33" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Aracely Cruz</h4>
-          <h4 style="margin-top: 1rem;">BackEnd</h4>
+          <h4 style="margin-top: 1rem;">BackEnd Developer</h4>
         </a>
         <a href="https://github.com/aracely33" target="_blank">
           <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
@@ -157,7 +157,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
         </a>
         <a href="https://github.com/Axel3890" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Axel Gomez</h4>
-          <h4 style="margin-top: 1rem;">BackEnd</h4>
+          <h4 style="margin-top: 1rem;">BackEnd Developer</h4>
         </a>
         <a href="https://github.com/Axel3890" target="_blank">
           <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
@@ -174,7 +174,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
         </a>
         <a href="https://github.com/PerezEnrique" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Jesus Enrique Perez</h4>
-          <h4 style="margin-top: 1rem;">Backend</h4>
+          <h4 style="margin-top: 1rem;">Backend Developer</h4>
         </a>
         <a href="https://github.com/PerezEnrique" target="_blank">
           <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
@@ -191,7 +191,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
         </a>
         <a href="https://github.com/ioskpu" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Luis Corales</h4>
-          <h4 style="margin-top: 1rem;">Backend</h4>
+          <h4 style="margin-top: 1rem;">Backend Developer</h4>
         </a>
         <a href="https://github.com/ioskpu" target="_blank">
           <img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=00436C&logo=GitHub&logoColor=FFFFFF&label="/>
@@ -329,9 +329,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
           <img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
         </a>
       </div>
-    </td>
     <td>
-      
   </tr>
 </table>
 
