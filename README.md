@@ -4,11 +4,11 @@
 
 ![Github Contributors](https://img.shields.io/github/contributors/No-Country/c16-07-m-node-react)
 ![Github Stars](https://img.shields.io/github/stars/No-Country/c16-07-m-node-react)
-</div>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
+</div>
 # c16-07-m-node-react
 Proyecto para simulacion No Country
 
