@@ -8,12 +8,13 @@ export default async function createEventHandler(
   next: NextFunction
 ) {
   try {
-    const {locate, category, name, description} = req.body
+    const {locate, category, name, description, date} = req.body
     
     const eventData = {
       locate: locate,
       name: name,
       description: description,
+      date: date,
     } as TEvent;
 
     const event = await createEvent(eventData);

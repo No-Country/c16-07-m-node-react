@@ -15,12 +15,13 @@ export default async function updateEventHandler(
       return;
     }
 
-    const {locate, category, name, description} = req.body
+    const {locate, name, description, date} = req.body
     
     const eventData = {
       locate: locate,
       name: name,
       description: description,
+      date: date,
     } as TEvent;
 
     await updateEvent(id, eventData);

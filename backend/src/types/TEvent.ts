@@ -4,4 +4,5 @@ export type TEvent = {
   imageUrl: string;
   locate: string;
   name: string;
+  date: Date;
 };

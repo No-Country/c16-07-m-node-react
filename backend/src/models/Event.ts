@@ -21,6 +21,9 @@ export default function initializeEventModel(sequelize: Sequelize) {
       description: {
         type: DataTypes.STRING,
       },
+      date: {
+          type: DataTypes.DATE
+      }
     },
     {
       timestamps: false,
