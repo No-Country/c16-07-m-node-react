@@ -260,7 +260,7 @@ Abre tu navegador web y accede a [http://localhost:5173](http://localhost:5173) 
     <td>
       <div align="center">
         <a href="https://github.com/Mauroariza" target="_blank" rel="author">
-          <img width="110" src="https://avatars.githubusercontent.com/u/65140672?v=4"/>
+          <img width="110" src="https://media.licdn.com/dms/image/D4E03AQEg3gfIIao8fQ/profile-displayphoto-shrink_200_200/0/1666472693350?e=1715212800&v=beta&t=dLd2YK7KAKPQTqG4Hf6z1szQHJWuRieahaKgSfQPqhA"/>
         </a>
         <a href="https://github.com/Mauroariza" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Mauricio Ariza</h4>
