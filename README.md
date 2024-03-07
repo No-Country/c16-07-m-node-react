@@ -34,8 +34,8 @@ Garantizar una vida saludable y promover el bienestar para todos en todas las ed
 
 <div align='center'>
 <a href="https://www.figma.com/proto/48RNmQumGmIC24IXswzsAn/DEMO-DAY?type=design&node-id=1-3&t=SRrhcrkCsFipF31l-1&scaling=contain&page-id=0%3A1&mode=design"><img src="https://img.shields.io/badge/PRESENTACION-0369A1?style=for-the-badge&logo=figma&logoColor=000000"/></a>
-<a href="https://www.figma.com/file/Fmz8nOyIDyHWHiLfNsiO0d/No-Country?type=whiteboard&node-id=338-561&t=tXx3spMHPtglHmIS-4"><img src="https://img.shields.io/badge/Ver%20Figjam-0EA5E9?style=for-the-badge&logo=figma&logoColor=000000"/></a>
-<a href="https://www.figma.com/file/poFZt7jHJFRmySqBBL9XAb/No-Country-APP?type=design&node-id=0%3A1&mode=design&t=fQ56LUytrHoErPIq-1" target="_blank"><img  src="https://img.shields.io/badge/Ver%20Figma-F59E0B?style=for-the-badge&logo=figma&logoColor=000000"/></a>
+<a href="https://www.figma.com/file/Fmz8nOyIDyHWHiLfNsiO0d/No-Country?type=whiteboard&node-id=338-561&t=tXx3spMHPtglHmIS-4"><img src="https://img.shields.io/badge/Ver_DOCUMENTACIÓN%20Figjam-0EA5E9?style=for-the-badge&logo=figma&logoColor=000000"/></a>
+<a href="https://www.figma.com/file/poFZt7jHJFRmySqBBL9XAb/No-Country-APP?type=design&node-id=0%3A1&mode=design&t=fQ56LUytrHoErPIq-1" target="_blank"><img  src="https://img.shields.io/badge/Ver_DISEÑO%20Figma-F59E0B?style=for-the-badge&logo=figma&logoColor=000000"/></a>
 <a href="https://acompanar.vercel.app/" target="_blank"><img  src="https://img.shields.io/badge/VER_API_ACOMPA%C3%91AR-0369A1?style=for-the-badge&logo=Vercel&logoColor=black"/></a>
 </div>
 
