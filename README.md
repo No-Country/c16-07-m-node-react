@@ -4,7 +4,7 @@
 
 ![Github Contributors](https://img.shields.io/github/contributors/No-Country/c16-07-m-node-react)
 ![Github Stars](https://img.shields.io/github/stars/No-Country/c16-07-m-node-react)
-
+</div>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -346,7 +346,7 @@ Andrés es un joven inquieto que siempre busca la manera de estar vinculado con 
 <img src="img/MacBook Pro 16.png"/>
 <img src="img/iPhone 15 Pro.png"/>
 <img src="img/iPhone 15 Pro2.png"/>
-
+</div>
 ## Contribución
 
 ¡Si deseas contribuir a este proyecto, sigue estos pasos!
