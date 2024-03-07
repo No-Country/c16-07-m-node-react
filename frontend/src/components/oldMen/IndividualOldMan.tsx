@@ -1,11 +1,5 @@
-import { Link } from "react-router-dom";
-import { oldManDTO } from "./oldMen.model";
 
-interface individualOldMan {
-   oldMan: oldManDTO;
-}
-
-export default function IndividualOldMan(props: individualOldMan) {
+export default function IndividualOldMan() {
    //const link = () => `/oldMan/individualOldMan`;
 
    return (

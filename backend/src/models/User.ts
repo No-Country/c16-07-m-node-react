@@ -4,45 +4,18 @@ export default function initializeUserModel(sequelize: Sequelize) {
   return sequelize.define(
     "Users",
     {
-      userId: {
+      id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
-      aboutMe: {
-        type: DataTypes.STRING,
-      },
-      createdAt: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
-      },
-      country: {
-        type: DataTypes.STRING,
-      },
-      firstName: {
-        type: DataTypes.STRING,
-      },
-      lastName: {
-        type: DataTypes.STRING,
-      },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      postalCode: {
-        type: DataTypes.STRING,
-      },
-      observations: {
-        type: DataTypes.STRING,
-      },
       address: {
         type: DataTypes.STRING,
       },
-      email: {
+      aboutMe: {
         type: DataTypes.STRING,
-        allowNull: false
       },
-      birthDate: {
+      birthdate: {
         type: DataTypes.STRING,
         validate: {
           isDateFormat: function (value: any) {
@@ -53,6 +26,36 @@ export default function initializeUserModel(sequelize: Sequelize) {
             }
           },
         },
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
+      country: {
+        type: DataTypes.STRING,
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      firstName: {
+        type: DataTypes.STRING,
+      },
+      lastName: {
+        type: DataTypes.STRING,
+      },
+      observations: {
+        type: DataTypes.STRING,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      phone: {
+        type: DataTypes.STRING,
+      },
+      postalCode: {
+        type: DataTypes.STRING,
       },
     },
     { timestamps: true }

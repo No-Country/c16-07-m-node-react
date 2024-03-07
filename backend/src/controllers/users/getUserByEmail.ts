@@ -5,7 +5,9 @@ export default async function getUserByEmail(email: string) {
   const user = await User.findOne({ where: { email } });
 
   if (!user)
+  
     throw boom.notFound("No se encontró usuario con el email provisto");
-
+    console.log(`No se encontró usuario con el email ${email}`);
   return user;
+  
 }
