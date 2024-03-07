@@ -1,7 +1,4 @@
 
-![Github Contributors](https://img.shields.io/github/contributors/No-Country/c16-07-m-node-react)
-![Github Stars](https://github.com/No-Country/c16-07-m-node-react)
-
 
 # c16-07-m-node-react
 Proyecto para simulacion No Country
