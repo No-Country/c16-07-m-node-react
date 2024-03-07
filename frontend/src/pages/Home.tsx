@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100">
       <header className="bg-white shadow">
-        <div className="flex justify-between items-center px-6 py-4">
+        <div className="flex justify-between items-center ">
           {/* Contenido del header */}
         </div>
       </header>
