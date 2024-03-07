@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { UserRegistrationContext } from "../context/UserRegistrationContext";
-import { loginRequest } from "../api/auth";
+import { useNavigate } from "react-router-dom";
+
+import {useAuth,} from "../context/Auth.context";
+
 
 interface IFormLogin {
     email: string; // Cambiado de username a email para reflejar el uso correcto
@@ -17,27 +19,27 @@ interface IProps {
 }
 
 export const LoginUser = ({ newUser, setNewUser }: IProps) => {
+
     const { register, handleSubmit, formState: { errors } } = useForm<IFormLogin>();
-    const { setUserData } = useContext(UserRegistrationContext);
     const navigate = useNavigate();
-
-    const onSubmit = async (data: IFormLogin) => {
-        try {
-            // Asegurarnos de que la estructura de data coincida con lo esperado por loginRequest
-            const loginData = { email: data.email, password: data.password };
-            const { token, user } = await loginRequest(loginData);
-            localStorage.setItem('token', token);
-            setUserData(user);
-            navigate('/');
-        } catch (error) {
-            console.error('Error al iniciar sesión', error);
+    const { signin,isAuthenticated  } =useAuth();
+   
+    
+    const onSubmit = (data: IFormLogin) => {
+        signin(data.email, data.password);
+      };
+      
+    
+    
+    useEffect(() => {
+        if (isAuthenticated) {
+          navigate('/');
         }
-    };
-
-    const handleChange = () => {
+      }, [isAuthenticated, navigate]);
+      
+      const handleChange = () => {
         setNewUser(!newUser);
     };
-
     return (
         <div className="w-full flex flex-col gap-4 p-5">
             <h2 className="font-bold text-2xl text-center">Inicia Sesión</h2>

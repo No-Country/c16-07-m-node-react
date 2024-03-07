@@ -9,11 +9,11 @@ import Perfil from "./pages/Perfil/Perfil";
 
 const rutas = [
   { path: "/oldMen/mostrar", element: MostrarOldman },
-  { path: "/", element: Home },
+  { path: "/Home", element: Home },
   { path: "/Login", element: Login },
   { path: "/Eventos", element: Eventos },
   { path: "/Ayuda", element: Ayuda },
-  { path: "/Landing", element: Landing },
+  { path: "/", element: Landing },
   { path: "/Perfil", element: Perfil },
   { path: "/Ejercicios", element: Ejercicios }
 ];

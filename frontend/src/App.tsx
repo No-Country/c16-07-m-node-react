@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // import Button from './components/ui/button'
 import { Routes, Route } from "react-router-dom";
+import {AuthProvider} from "./context/Auth.context";
 
 import rutas from "./route.config";
 import { UserRegistrationProvider } from "./context/UserRegistrationContext";
@@ -11,6 +12,7 @@ import { UserRegistrationProvider } from "./context/UserRegistrationContext";
 function App() {
    return (
       <>
+      <AuthProvider>
       <UserRegistrationProvider>
          <Navbar />
          <Routes>
@@ -24,6 +26,7 @@ function App() {
          </Routes>
          <Footer />
          </UserRegistrationProvider>
+         </AuthProvider>
       </>
    );
 }

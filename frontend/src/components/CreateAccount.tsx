@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, {useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { UserRegistrationContext } from "../context/UserRegistrationContext";
-import { registerUser } from "../api/authRegister";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../context/Auth.context";
 
 interface CreateAccountFormData {
   address: string;
@@ -28,28 +28,20 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
-  const { setUserData } = useContext(UserRegistrationContext);
+  const navigate = useNavigate();
+
+  const {signup,isAuthenticated} =useAuth();
+  
 
   const [alert, setAlert] = useState({ show: false, message: "" });
 
-  const handleCreateAccount = async (data: CreateAccountFormData) => {
-    try {
-      const userData = await registerUser(data);
-      setUserData(userData);
-      setAlert({ show: true, message: "Usuario creado correctamente" });
-
-      setTimeout(() => {
-        handleChange(); // Llama a handleChange que redirecciona al inicio de sesión
-      }, 1000); // Redirige después de 1 segundo
-      // Aquí se puede dirigir al usuario o mostrar un mensaje de éxito
-    } catch (error) {
-      console.error(error);
-      // Aquí  se puede mostrar un mensaje de error al usuario
-    }
-  };
   const handleChange = () => {
     setNewUser(!newUser);
   };
+  const onSubmit = (data: CreateAccountFormData) => {
+    signup(data, handleChange);
+  };
+  
 
   return (
     <section className="w-full max-w-xl mx-auto  bg-white rounded-lg   ">
@@ -69,7 +61,7 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
   
    </div>
       
-      <form onSubmit={handleSubmit(handleCreateAccount)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
           <label
             htmlFor="firstName"
@@ -127,10 +119,10 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
           )}
         </div>
 
-        <div>
+       <div>
           <label
             htmlFor="password"
-            className="text-sm font-medium text-gray-700"
+             className="text-sm font-medium text-gray-700"
           >
             Contraseña
           </label>
