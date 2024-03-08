@@ -1,7 +1,8 @@
 export type TEvent = {
   readonly id: number;
-  category: number; //Probablemente esto sea un Interest luego
   description: string;
+  imageUrl: string;
   locate: string;
   name: string;
+  date: Date;
 };

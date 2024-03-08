@@ -1,6 +1,6 @@
 import boom from "@hapi/boom";
 import bcrypt from "bcrypt";
-import { User, Interest, Purpose } from "../../db";
+import { User, Interest, Purpose, Event } from "../../db";
 import { TUser } from "../../types/TUser";
 export default async function updateUser(
   userId: number,
@@ -23,6 +23,7 @@ export default async function updateUser(
   user.observations = userData.observations;
   user.phone = userData.phone;
   user.postalCode = userData.postalCode;
+  user.imageUrl = userData.imageUrl;
 
   if (userData.password) {
     userData.password = await bcrypt.hash(userData.password, 10);
@@ -63,5 +64,10 @@ export default async function updateUser(
     user.setPurpose(purpose);
   }
 
-  return await user.save(userData);
+  await user.save(userData);
+
+  return await User.findByPk(userId,{
+    attributes: {exclude : ["password"]},
+    include: [{ model: Purpose, as: "purpose" }, { model: Interest, through: { attributes: [] }, as: "interests" },  { model: Event, through: { attributes: [] }, as: "events"}],
+  });
 }

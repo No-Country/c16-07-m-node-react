@@ -1,5 +1,4 @@
 import createUser from "../../controllers/users/createUser";
-import { getUserWithoutPassword } from "../../Utils/helpers";
 import type { Request, Response, NextFunction } from "express";
 import type { TUser } from "../../types/TUser";
 
@@ -14,6 +13,7 @@ export default async function createUserHandler(
       aboutMe,
       birthdate,
       country,
+      imageUrl,
       email,
       firstName,
       lastName,
@@ -28,6 +28,7 @@ export default async function createUserHandler(
       aboutMe,
       birthdate,
       country,
+      imageUrl,
       email,
       firstName,
       lastName,
@@ -38,9 +39,7 @@ export default async function createUserHandler(
     } as TUser;
 
     const user = await createUser(userData) as any;
-    const userWithoutPassword = getUserWithoutPassword(user);
-    
-    return res.status(201).json(userWithoutPassword);
+    return res.status(201).json(user);
   } catch (error) {
     console.error("Error al intentar registrar el usuario");
     next(error);
