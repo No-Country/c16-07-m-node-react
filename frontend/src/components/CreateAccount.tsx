@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/Auth.context";
 
@@ -27,11 +28,12 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
+  
 
   const { signup } = useAuth();
 
 
-  const [alert] = useState({ show: false, message: "" });
+  
 
   const handleChange = () => {
     setNewUser(!newUser);
@@ -42,23 +44,17 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
 
 
   return (
-    <section className="w-full max-w-xl mx-auto  bg-white rounded-lg max-sm:w-max max-sm:mb-12 ">
-      {alert.show && (
-        <div className="fixed inset-0 flex items-center justify-center z-10">
-          <div className="bg-sky-200 font-semibold text-black text-center p-4 rounded-lg  max-w-sm">
-            {alert.message}
-          </div>
-        </div>
-      )}
-
-      <div className="gap-2 p-12 " >
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 ">
-          Crea Cuenta
-        </h2>
-        <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
-
-      </div>
-
+    <section className="w-full max-w-xl mx-auto  bg-white rounded-lg   ">
+     
+      
+<div className= "gap-2 p-12 " >
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 ">
+        Crea Cuenta
+      </h2>
+      <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
+  
+   </div>
+      
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
           <label
