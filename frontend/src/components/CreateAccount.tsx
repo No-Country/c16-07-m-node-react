@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+
 import { useAuth } from "../context/Auth.context";
 
 interface CreateAccountFormData {
@@ -26,12 +27,11 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
-  
 
-  const {signup} =useAuth();
-  
+  const { signup } = useAuth();
 
-  
+
+ 
 
   const handleChange = () => {
     setNewUser(!newUser);
@@ -39,20 +39,20 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
   const onSubmit = (data: CreateAccountFormData) => {
     signup(data, handleChange);
   };
-  
+
 
   return (
-    <section className="w-full max-w-xl mx-auto  bg-white rounded-lg   ">
-     
-      
-<div className= "gap-2 p-12 " >
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 ">
-        Crea Cuenta
-      </h2>
-      <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
+    <section className="w-full max-w-xl mx-auto  bg-white rounded-lg max-sm:w-max max-sm:mb-12 ">
   
-   </div>
-      
+
+      <div className="gap-2 p-12 " >
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 ">
+          Crea Cuenta
+        </h2>
+        <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
+
+      </div>
+
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
           <label
@@ -111,10 +111,10 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
           )}
         </div>
 
-       <div>
+        <div>
           <label
             htmlFor="password"
-             className="text-sm font-medium text-gray-700"
+            className="text-sm font-medium text-gray-700"
           >
             Contraseña
           </label>
@@ -271,11 +271,11 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
           >
             Crear Cuenta
           </button>
-          
+
         </div>
-        
+
       </form>
-     
+
     </section>
   );
 };
