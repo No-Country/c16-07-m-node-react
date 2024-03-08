@@ -1,6 +1,5 @@
-import React, {useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/Auth.context";
 
@@ -28,12 +27,11 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
-  const navigate = useNavigate();
 
-  const {signup,isAuthenticated} =useAuth();
+  const {signup} =useAuth();
   
 
-  const [alert, setAlert] = useState({ show: false, message: "" });
+  const [alert] = useState({ show: false, message: "" });
 
   const handleChange = () => {
     setNewUser(!newUser);
