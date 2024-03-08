@@ -1,5 +1,8 @@
 import 'dotenv/config';
+
+console.log(process.env.DB_PASSWORD);
 import { Sequelize } from 'sequelize';
+
 import { ModelCtor } from 'sequelize-typescript';
 import * as fs from 'fs'
 import path from 'path'
@@ -11,13 +14,14 @@ import initializeUserModel from './models/User';
 
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
+console.log(process.env.DB_PASSWORD);
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
   username: DB_USER,
   password: DB_PASSWORD,
   host: DB_HOST,
-  port: Number(DB_PORT), 
+  port: Number(5432), 
   database: DB_NAME,
   logging: false,
   native: false,
@@ -34,17 +38,21 @@ export const User = initializeUserModel(sequelize);
 
 // ACA VAN LAS RELACIONES
 User.belongsTo(Purpose, {
-    foreignKey: {
-        "name": "purposeId"
-    }
+    foreignKey: "purposeId",
+    as: "purpose"
 });
-Purpose.hasMany(User);
+Purpose.hasMany(User, {
+    foreignKey: "purposeId",
+});
 
-User.belongsToMany(Interest, {through: "UsersInterests"});
+User.belongsToMany(Interest, {through: "UsersInterests", as: "interests"});
 Interest.belongsToMany(User, {through: "UsersInterests"});
 
 Interest.belongsToMany(Event, {through: "InterestsEvents"});
-Event.belongsToMany(Interest, {through: "InterestsEvents"});
+Event.belongsToMany(Interest, {through: "InterestsEvents", as: "categories"});
+User.belongsToMany(Event, {through: "UsersEvents", as:"events"});
+Event.belongsToMany(User,{through: "UsersEvents"});
+
 
 function getAndCapitalizeModels()
 {

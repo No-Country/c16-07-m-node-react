@@ -3,13 +3,13 @@ export default function Ayuda() {
     
     <section className="flex flex-col items-center bg-white ">
       <div className="w-full h-0.5 bg-sky-100"></div>
-      <div className="absolute overflow-hidden w-full h-3/4 bottom-[0] bg-gradient-to-t from-sky-500 opacity-40">        
+      <div className="absolute overflow-hidden w-full h-3/4 bottom-[0] bg-gradient-to-b from-sky-100 via-sky-200">        
       </div>
-      <h1 className="text-sky-500 font-semibold my-10">PREGUNTAS FRECUENTES</h1>
+      <h1 className="text-sky-900 text-xl  font-bold my-10">PREGUNTAS FRECUENTES</h1>
       <h2 className="text-black text-center font-bold text-2xl mb-5">
         ¿Tienes preguntas?
       </h2>
-      <p className="text-gray-800 px-10 text-center text-sky-800 mb-10 max-w-xl">Te mostramos algunas preguntas que nos suelen hacer y los medios de contacto por si no las podemos responder en esta sección.
+      <p className="px-10 text-center text-sky-800 mb-10 max-w-xl">Te mostramos algunas preguntas que nos suelen hacer y los medios de contacto por si no las podemos responder en esta sección.
       </p>
       <div className="space-y-5 px-10 md:flex md:flex-wrap md:justify-center md:space-y-0">
         <div className="md:w-1/2 md:min-h-56 md:p-2 ">

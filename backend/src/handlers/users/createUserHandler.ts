@@ -7,17 +7,19 @@ export default async function createUserHandler(
   res: Response,
   next: NextFunction
 ) {
-  try {
+  try { 
     const {
       address,
       aboutMe,
       birthdate,
       country,
+      imageUrl,
       email,
       firstName,
       lastName,
       observations,
       password,
+      phone,
       postalCode,
     } = req.body;
 
@@ -26,15 +28,17 @@ export default async function createUserHandler(
       aboutMe,
       birthdate,
       country,
+      imageUrl,
       email,
       firstName,
       lastName,
       observations,
       password,
+      phone,
       postalCode,
     } as TUser;
 
-    const user = await createUser(userData);
+    const user = await createUser(userData) as any;
     return res.status(201).json(user);
   } catch (error) {
     console.error("Error al intentar registrar el usuario");
