@@ -3,7 +3,7 @@ import { createContext, useContext, useState,ReactNode } from "react";
 import Cookies from "js-cookie";
 import {registerUser} from "../api/authRegister";
 import {loginRequest} from "../api/authLogin"; 
-import { useNavigate } from "react-router-dom";
+
 
 type AuthContextType = {
     user: any; // Reemplaza any con el tipo adecuado para tu usuario

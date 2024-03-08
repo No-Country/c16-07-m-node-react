@@ -1,7 +1,5 @@
-import React, {useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { useAuth } from "../context/Auth.context";
 
 interface CreateAccountFormData {
@@ -28,12 +26,12 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
-  const navigate = useNavigate();
+ 
 
-  const {signup,isAuthenticated} =useAuth();
+  const {signup} =useAuth();
   
 
-  const [alert, setAlert] = useState({ show: false, message: "" });
+  
 
   const handleChange = () => {
     setNewUser(!newUser);
@@ -45,13 +43,7 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
 
   return (
     <section className="w-full max-w-xl mx-auto  bg-white rounded-lg   ">
-      {alert.show && (
-        <div className="fixed inset-0 flex items-center justify-center z-10">
-          <div className="bg-sky-200 font-semibold text-black text-center p-4 rounded-lg  max-w-sm">
-            {alert.message}
-          </div>
-        </div>
-      )}
+     
       
 <div className= "gap-2 p-12 " >
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 ">
