@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { useAuth } from "../context/Auth.context";
 
 interface CreateAccountFormData {
@@ -26,7 +28,7 @@ export const CreateAccount = ({ newUser, setNewUser }: IProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<CreateAccountFormData>();
- 
+  
 
   const {signup} =useAuth();
   
