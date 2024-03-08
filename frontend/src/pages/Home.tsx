@@ -1,5 +1,5 @@
 import React from 'react';
-import fondoAbuelos from '../../public/assets/image/banner.png'
+import fondoAbuelos from '../assets/img/banner.png'
 
 export default function Home() {
   return (
