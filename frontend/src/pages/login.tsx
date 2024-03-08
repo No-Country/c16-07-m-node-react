@@ -10,13 +10,13 @@ export default function Login() {
 
   const [newUser, setNewUser] = useState(true)
 
- 
+
   return (
     <div className="w-full flex flex-row gap-3">
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center max-sm:hidden">
         <img src={newUser ? LoginImg : fondoManos} width="60%" />
       </div>
-      <div className="w-full flex flex-col items-start">
+      <div className="w-full flex flex-col items-start ">
         {newUser ?
           <LoginUser newUser={newUser} setNewUser={setNewUser} />
           :

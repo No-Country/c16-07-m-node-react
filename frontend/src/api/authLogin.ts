@@ -11,7 +11,7 @@ interface LoginResponse {
 
 export const loginRequest = async (data: LoginData): Promise<LoginResponse> => {
   try {
-    const response = await instance.post('http://localhost:3001/users/login', data);
+    const response = await instance.post('/users/login', data);
     const token = response.headers.authorization.split(' ')[1];
     // Aquí asumimos que la información del usuario viene en el cuerpo de la respuesta
     const user = response.data;

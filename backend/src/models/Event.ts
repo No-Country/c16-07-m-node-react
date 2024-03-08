@@ -9,11 +9,11 @@ export default function initializeEventModel(sequelize: Sequelize) {
         autoIncrement: true,
         primaryKey: true,
       },
-      locate: {
+      imageUrl: {
         type: DataTypes.STRING,
       },
-      category: {
-        type: DataTypes.INTEGER,
+      locate: {
+        type: DataTypes.STRING,
       },
       name: {
         type: DataTypes.STRING,
@@ -21,6 +21,9 @@ export default function initializeEventModel(sequelize: Sequelize) {
       description: {
         type: DataTypes.STRING,
       },
+      date: {
+          type: DataTypes.DATE
+      }
     },
     {
       timestamps: false,

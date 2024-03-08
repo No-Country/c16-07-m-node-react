@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from "react-router-dom";
 
-import {useAuth,} from "../context/Auth.context";
+import { useAuth, } from "../context/Auth.context";
 
 
 interface IFormLogin {
@@ -22,26 +22,26 @@ export const LoginUser = ({ newUser, setNewUser }: IProps) => {
 
     const { register, handleSubmit, formState: { errors } } = useForm<IFormLogin>();
     const navigate = useNavigate();
-    const { signin,isAuthenticated  } =useAuth();
-   
-    
+    const { signin, isAuthenticated } = useAuth();
+
+
     const onSubmit = (data: IFormLogin) => {
         signin(data.email, data.password);
-      };
-      
-    
-    
+    };
+
+
+
     useEffect(() => {
         if (isAuthenticated) {
-          navigate('/home');
+            navigate('/home');
         }
-      }, [isAuthenticated, navigate]);
-      
-      const handleChange = () => {
+    }, [isAuthenticated, navigate]);
+
+    const handleChange = () => {
         setNewUser(!newUser);
     };
     return (
-        <div className="w-full flex flex-col gap-4 p-5">
+        <div className="w-full flex flex-col gap-4 p-5 ">
             <h2 className="font-bold text-2xl text-center">Inicia Sesión</h2>
             <p className="text-center text-xl font-bold text-sky-500">Acompañar +</p>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">

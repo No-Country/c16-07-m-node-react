@@ -2,12 +2,13 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import banner from "../../public/assets/image/banner.png";
 
 export default function Landing() {
   return (
     <main className="bg-secondary-content bottom-20 min-h-screen w-full text-sky-900" >
 
-      <section className="flex items-center flex-col w-full h-fit" style={{ backgroundImage: 'url("../public/assets/image/banner.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>        
+      <section className="flex items-center flex-col w-full h-fit" style={{ backgroundImage: `url(${banner})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>        
         <div className="card bg-white shadow-xl my-40 min-w-72 mx-10 ">        
           <div className="card-body items-center text-center text-sky-900">
             <h2 className="card-title text-4xl font-extrabold max-w-96">Conectando Generaciones</h2>
